@@ -1,11 +1,25 @@
 
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Home from './components/screens/hom/Home';
+import Showing from './components/screens/showingData/Showing';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Community from './components/screens/community/Community';
+
 
 function App() {
   return (
-    <div className="App">
-      hi project
-      kjhgf
-    </div>
+   <BrowserRouter>
+    <Header />
+    <main>
+      <Routes>
+      <Route path="/" element={<Home />} exact />
+      <Route path="/showing" element={<Showing />} />
+      <Route path="/communty" element={<Community />} />
+    </Routes>
+    </main>
+   <Footer />
+   </BrowserRouter>
   );
 }
 
