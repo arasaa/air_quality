@@ -59,6 +59,7 @@ function Home() {
         <br/>pm2_5:  {status.airQuality.pm2_5}
         <br/>pm10: {status.airQuality.pm10}
         <br/>so2: {status.airQuality.so2} </div>
+        <h1>Hiwa</h1>
 
       {status.airQuality["gb-defra-index"]==1?
         <div style={{background:"green", display:"block", width: "30px", height: "30px"}}></div>
