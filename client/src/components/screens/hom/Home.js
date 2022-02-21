@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import "./home.css"
+
 
 function Home() {
 
@@ -59,16 +61,16 @@ function Home() {
         <br/>pm2_5:  {status.airQuality.pm2_5}
         <br/>pm10: {status.airQuality.pm10}
         <br/>so2: {status.airQuality.so2} </div>
+        
 
-      {status.airQuality["gb-defra-index"]==1?
-        <div style={{background:"green", display:"block", width: "30px", height: "30px"}}></div>
+      {status.airQuality["gb-defra-index"]===1?
+        <div style={{background:"green", display:"block", width: "250px", height: "30px"}}></div>
         :
         <div style={{background:"red", display:"block", width: "30px", height: "30px"}}></div>
       }
-      {/* { <City props={city}/> } */}
-
-      {/* <h3>City: {city}</h3> */}
+     {/* <footer style={{position:"fixed",bottom:"0"}}></footer> */}
     </div>
+    
   )
 
 
