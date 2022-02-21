@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import "./home.css"
 function Home() {
 
 //define STATE variable in react
