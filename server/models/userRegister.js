@@ -28,9 +28,21 @@ const userRegSchema = mongoose.Schema(
 
 },
 {
-    timestams: true,
+    timestamps: true,
 }
 );
+
+//bevore saving the operation. calling a middleware function and
+// bcrypting the passowrd
+userRegSchema.pre('save', async function (next) {
+    //if the passowrd is not modified the go to next
+    if(!this.isModified('password')){
+        next();
+    }
+    //generating salt bcrypting
+    const salt = await bcrypt.genSalt(6);
+    this.password = await bcrypt.hash(this.password, salt);
+})
 
 const User = mongoose.model('User',userRegSchema);
 
