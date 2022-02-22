@@ -7,7 +7,8 @@ const server = express();
 //importing userRoutes
 const userRoutes = require("./routes/userRoutes")
 //DB connection
-const connectDB = require("./config/db")
+const connectDB = require("./config/db");
+const { errorHandler, notFound } = require("./middlewares/errorMiddleware");
 require("dotenv").config();
 connectDB()
 server.use(express.json())
@@ -35,5 +36,10 @@ server.get("/coments/:id", (req, res) =>{
 
 //end point for userLogReg page
 server.use('/user',userRoutes);
+
+//calling the notFound middleware function from error handler
+server.use(notFound);
+//calling the errorHandler middleware function from error handler
+server.use(errorHandler)
 
 server.listen(port, () => console.log(`server run on port ${port}`));
