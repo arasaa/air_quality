@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler');
-const User = require('../models/userRegister')
+const User = require('../models/userModel')
 
 
 
@@ -46,4 +46,32 @@ const registerUser = asyncHandler( async (req, res) => {
     
 });
 
-module.exports= {registerUser}
+const authUser = asyncHandler( async (req, res) => {
+    //here are what we requested from a user hwo want to register
+    const {email, password} = req.body;
+
+    //using findeOne method from mongoose to search for our unique email
+    const user = await User.findOne({email})
+
+    //if there is something inside user and if password is correct
+    //we see if password matches to current password
+    if(user && (await user.matchPassword(password))) {
+        //if user was found and password is currect then
+        //response users data
+        res.json({
+            _id:user._id,
+            name:user.name,
+            email:user.email,
+            pic:user.pic,
+            });
+    
+        }//else throw an Error
+        else{
+                res.status(400);
+                throw new Error("password or email is incorrect");
+        }
+
+    
+});
+
+module.exports= {registerUser, authUser}

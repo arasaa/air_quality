@@ -8,7 +8,7 @@ const notFound = (req, res, next) => {
 };
 
 //general error handling
-//converting the error to a structuring Form
+//converting the error to a structuring Form/ to a better format
 const errorHandler = (err, req, res, next) => {
     const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
     res.status(statusCode);

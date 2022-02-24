@@ -1,7 +1,4 @@
-
-
 const express = require("express");
-const coments = require("./data/coments");
 const server = express();
 
 //importing userRoutes
@@ -18,11 +15,7 @@ const port = process.env.PORT ||5000
 
 //first API`home APi`
 server.get("/", (req, res) =>{
-    res.send('home/api')
-})
-
-server.get("/coments", (req, res) =>{
-    res.json(coments);
+    res.send('home')
 })
 
 
