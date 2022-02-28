@@ -20,18 +20,6 @@ server.get("/", (req, res) =>{
     res.send('home api')
 })
 
-// server.get("/comments", (req, res) =>{
-//     res.json(comments);
-// })
-
-
-// //test endpoint by searching for data with _id
-// server.get("/comments/:id", (req, res) =>{
-//     const comment = comments.find((item) => item._id === +req.params.id);
-
-//     res.send(comment);
-    
-// })
 
 //end point for userLogReg page
 server.use('/user',userRoutes);
