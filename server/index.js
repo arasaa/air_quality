@@ -3,6 +3,8 @@ const server = express();
 
 //importing userRoutes
 const userRoutes = require("./routes/userRoutes")
+//importing communityRoutes
+const communityRoutes = require("./routes/communityRoutes")
 //DB connection
 const connectDB = require("./config/db");
 const { errorHandler, notFound } = require("./middlewares/errorMiddleware");
@@ -33,6 +35,8 @@ server.get("/", (req, res) =>{
 
 //end point for userLogReg page
 server.use('/user',userRoutes);
+//end point route for community
+server.use('/community',communityRoutes);
 
 //calling the notFound middleware function from error handler
 server.use(notFound);
