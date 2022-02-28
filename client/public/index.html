@@ -1,70 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Air Quality</title>
-    <link rel="stylesheet" href="./style.css">
-    <!======================== kit Icon ============================!>
-           <script src="https://kit.fontawesome.com/c97455ccfa.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header class="header" id="header">
-        <a href="#" class="logo">Air Quality</a>
-       <nav class="navbar">
-           <img src="./Icon/close.png" alt="" class="cross">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-       </nav>
-    </header>
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-    <!======================== CONTAINER ============================!>
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-    <main class="main" id="main">
-        <!======================== UPLOAD BOX ============================!>
-        <section class="container" id="container">
-            <div class="upload">
-                <div class="small_header">
-                <p class="small_title">
-                    <i class="fa-thin fa-cloud-arrow-up"></i>
-                    <span class="up">up</span>
-                    <span class="load">Load</span>
-                </p>
-
-                <div class="small_body" id="drop">
-                    <img src="./Icon/move copie.png" alt="" class="icon_drop">
-                    <p class="pointer-none">
-                        <b>Drag and drop</b> files here <br> or <a href="" id="triggerFile">browse</a>
-                        to begin the upload
-                    </p>
-                    <input type="file" multiple="multiple" class="input_file">
-                </div>
-
-                <div class="small_footer">
-
-                </div>
-                </div>    
-            </div> 
-            
-            <div class="create" id="create">
-                <div class="title_pin">
-                    <p>Create your pin</p>
-                </div>
-                <div class="tag">
-                    <p>Tag your Pin</p>
-                </div>
-                
-                <textarea rows="4" cols="25" name="comment" placeholder="Comment your Pin..." maxlength="500">
-                    
-                </textarea>
-                
-                <div class="bouton">
-                    <input type="submit" value="submit" class="btn">
-                </div>
-            </div>
-            
-        </section>
-       
-    </main>
-</body>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
 </html>

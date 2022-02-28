@@ -1,4 +1,5 @@
 const express = require("express");
+const comments = require("./data/comments");
 const server = express();
 
 //importing userRoutes
@@ -15,15 +16,19 @@ const port = process.env.PORT ||5000
 
 //first API`home APi`
 server.get("/", (req, res) =>{
-    res.send('home')
+    res.send('home api')
+})
+
+server.get("/comments", (req, res) =>{
+    res.json(comments);
 })
 
 
 //test endpoint by searching for data with _id
-server.get("/coments/:id", (req, res) =>{
-    const coment = coments.find((item) => item._id === +req.params.id);
+server.get("/comments/:id", (req, res) =>{
+    const comment = comments.find((item) => item._id === +req.params.id);
 
-    res.send(coment);
+    res.send(comment);
     
 })
 
