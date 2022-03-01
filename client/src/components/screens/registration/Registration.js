@@ -17,8 +17,8 @@ const Registration = () => {
 <label htmlFor="psw"><b>Password</b></label>
 <input type="password" placeholder="Enter Password" name="15" id="Password"required/>
 
-
-<label> Gender </label><br/>
+<div></div>
+ <label> Gender </label><br/>
 <input type="radio" value="Male" name="gender" /> Male
 <input type="radio" value="Female" name="gender" /> Female
 <div/>
