@@ -1,6 +1,6 @@
 
 import Footer from './components/Footer';
-import Header from './components/Header';
+import Header from './components/header/Header';
 import Home from './components/screens/hom/Home';
 import Showing from './components/screens/showingData/Showing';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -17,7 +17,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />} exact />
       <Route path="/showing" element={<Showing />} />
-      <Route path="/communty" element={<Community />} />
+      <Route path="/community" element={<Community />} />
       <Route path="/login" element={<Login />} />
       <Route path="/registration" element={<Registration />} />
     </Routes>

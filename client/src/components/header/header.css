@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Urbanist:wght@200&display=swap');
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: aqua;
+}
+
+.logo a{
+    cursor: pointer;
+    color: rgb(56, 65, 8);
+}
+li{
+    display: inline-block;
+    padding: 0px 20px;   
+    
+}
+ a{
+    font-family: "montserrat", sans-serif;
+    font-weight:500;
+    font-size: 16px;
+    text-decoration: none;
+    
+    
+}
+a:hover{
+    color: #0088a9;
+}
