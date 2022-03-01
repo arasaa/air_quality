@@ -13,9 +13,9 @@ const Registration = () => {
 <label htmlFor="psw"><b> Lastname</b> </label>
 <input type="text" name="lastname" placeholder="Lastname" size="15"required />
 <label htmlFor="psw"><b>email</b></label>
-<input type="text" placeholder="Enter Email" name="email" id="email" required />
+<input type="text" placeholder="Enter Email" name="email" id="15" required />
 <label htmlFor="psw"><b>Password</b></label>
-<input type="password" placeholder="Enter Password" name="psw" id="psw" required/>
+<input type="password" placeholder="Enter Password" name="15" id="Password"required/>
 
 
 <label> Gender </label><br/>

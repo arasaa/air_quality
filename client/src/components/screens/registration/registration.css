@@ -1,8 +1,8 @@
-/* body{
+ body{
     color:rgb(30, 90, 70)
 }
 
-input[type=text], input[type=password], textarea {
+.registerbtn-input[type=text], input[type=password], textarea {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -35,9 +35,9 @@ input[type=text], input[type=password], textarea {
     opacity: 1;
   } 
 
- */
+ 
 
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, 
+/* body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, 
 pre, form, fieldset, input, textarea, p, blockquote, th, td { 
   padding:o;
   margin:0;
@@ -149,7 +149,7 @@ hr{
 }
 
 input[type=text],input[type=password]{
-  width: 2000px; 
+  width: 200px; 
   height: 39px; 
   -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
   -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px; 
@@ -224,7 +224,7 @@ a.button:hover {
   box-shadow: none;
   
 }
-
+ */
 
     
     
