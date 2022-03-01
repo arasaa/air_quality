@@ -12,16 +12,16 @@ const protect = asyncHandler(async ( req, res, next ) => {
     //if authorization has a token beginning with Bearer
     if(
         req.headers.authorization &&
-        req.headers.authorization.startwith('Bearer')
+        req.headers.authorization.startsWith('Bearer')
     ){
         try{
             //removing the bearer and adding the token
             token = req.headers.authorization.split(' ')[1];
-
             //decoding token id
             const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            
             //if it works it will find user by id and it will do not get password from user
-            req.user = new User.findById(decoded.id).select("-password");
+            req.user = await User.findById(decoded.id).select("-password");
 
             //next will send request to the get api
             next()

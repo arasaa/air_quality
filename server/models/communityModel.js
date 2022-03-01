@@ -11,6 +11,11 @@ const communitySchema = mongoose.Schema(
             type: 'string',
             required: true,
         },
+        pic: {
+            type: 'string',
+            required: true,
+            default: 'https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg',
+        },
         user: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,
@@ -23,6 +28,6 @@ const communitySchema = mongoose.Schema(
     
 );
 
-const Community = mongoose.model("Community", communitySchema);
+const Post = mongoose.model("Post", communitySchema);
 
-module.exports = Community;
+module.exports = Post;
