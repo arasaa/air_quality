@@ -52,7 +52,7 @@ function Home() {
 
       <div>{city} (lat:{status.lat}, lon:{status.lon}) </div>
       <div>{status.condition}  {status.temp} {status.is_day}deg  <img src={status.icon} alt="icon" /></div>
-      <div>Air Quality:
+      {/* <div>Air Quality:
         <br/>co: {status.airQuality.co}
         <br/>gb-defra-index: {status.airQuality["gb-defra-index"]}
         <br/>no2: {status.airQuality.no2}
@@ -60,13 +60,13 @@ function Home() {
         <br/>o3: {status.airQuality.o3}
         <br/>pm2_5:  {status.airQuality.pm2_5}
         <br/>pm10: {status.airQuality.pm10}
-        <br/>so2: {status.airQuality.so2} </div>
+        <br/>so2: {status.airQuality.so2} </div> */}
         
 
       {status.airQuality["gb-defra-index"]===1?
         <div style={{background:"green", display:"block", width: "250px", height: "30px"}}></div>
         :
-        <div style={{background:"red", display:"block", width: "30px", height: "30px"}}></div>
+        <div style={{background:"red", display:"block", width: "250px", height: "30px"}}></div>
       }
      {/* <footer style={{position:"fixed",bottom:"0"}}></footer> */}
     </div>
