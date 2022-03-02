@@ -1,5 +1,6 @@
 const express = require("express");
 const server = express();
+const cors = require("cors");
 
 //importing userRoutes
 const userRoutes = require("./routes/userRoutes")
@@ -11,8 +12,7 @@ const { errorHandler, notFound } = require("./middlewares/errorMiddleware");
 require("dotenv").config();
 connectDB()
 server.use(express.json())
-
-const port = process.env.PORT ||5000
+const port = process.env.PORT ||5001
 
 
 //first API`home APi`
@@ -20,6 +20,7 @@ server.get("/", (req, res) =>{
     res.send('home api')
 })
 
+server.use(cors());
 
 //end point for userLogReg page
 server.use('/user',userRoutes);

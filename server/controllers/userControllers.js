@@ -7,10 +7,10 @@ const generateToken = require('../utils/generateToken');
 //i wrapped the register with asyncHandler to handle all the errors that may occur in the app
 const registerUser = asyncHandler( async (req, res) => {
     //here are what we requested from a user hwo want to register
-    const {name, email, password, pic} = req.body;
+    const {firstname, lastname, email, password, pic, gender} = req.body;
 
     //if the user exists
-    const userExists = await User.findOne({email});
+    const userExists = undefined || await User.findOne({email});
 
     //1_if there is something inside exist
     if(userExists){
@@ -22,7 +22,9 @@ const registerUser = asyncHandler( async (req, res) => {
         //if it doesn't exist then
         //create a new one
         const user = await User.create({
-            name,
+            firstname,
+            lastname,
+            gender,
             email,
             password,
             pic,
@@ -34,7 +36,9 @@ const registerUser = asyncHandler( async (req, res) => {
             //we don't send the password as response
             res.status(201).json({
                 _id:user._id,
-                name:user.name,
+                firstname:user.firstname,
+                lastname: user.lastname,
+                gender: user.gender,
                 email:user.email,
                 pic:user.pic,
                 token:generateToken(user._id),
@@ -62,7 +66,7 @@ const authUser = asyncHandler( async (req, res) => {
         //response users data
         res.json({
             _id:user._id,
-            name:user.name,
+            FirstName:user.FirstName,
             email:user.email,
             token:generateToken(user._id),
             pic:user.pic,

@@ -5,31 +5,38 @@ const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
 
 const userRegSchema = mongoose.Schema(
-{
-    name: {
-        type: 'string',
-        required: true,
+  {
+    firstname: {
+      type: "string",
+      required: true,
+    },
+    lastname: {
+      type: "string",
+      required: true,
+    },
+    gender: {
+      type: "string",
+      required: true,
     },
     email: {
-        type: 'string',
-        required: true,
-        unique: true,
+      type: "string",
+      required: true,
+      unique: true,
     },
     password: {
-        type: 'string',
-        required: true,
-
+      type: "string",
+      required: true,
     },
     pic: {
-        type: 'string',
-        required: true,
-        default: 'https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg',
+      type: "string",
+      required: true,
+      default:
+        "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
     },
-
-},
-{
+  },
+  {
     timestamps: true,
-}
+  }
 );
 
 //bevore saving the operation. calling a middleware function and
