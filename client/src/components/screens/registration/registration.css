@@ -1,11 +1,11 @@
 
 
 .Register{
-	width: 450px;
+	width: 60%;
 	font-size: 16px;
-	background: #396594;
-	padding: 30px 30px 15px 30px;
-	border: 5px solid #53687E;
+	background: #326296;
+	padding: 100px 120px 35px 40px;
+	border: 5px solid #60676e;
     margin: auto;
 }
 .Register input[type=submit],
@@ -44,7 +44,7 @@
 	font-style: italic;
 	padding: 0px 0px 0px 0px;
 	background: transparent;
-	outline: none;
+	outline:none;
 	border: none;
 	border-bottom: 1px dashed #83A4C5;
 	width: 275px;
