@@ -22,29 +22,6 @@
     box-sizing: border-box;
     display: block;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .postBtn {
     border: 0;
     line-height: 2.5;
@@ -71,4 +48,28 @@
 .postBtn:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+
+/****/
+.container{
+    background-color: #0a7b8d;
+    color: rgb(255, 255, 255);
+}
+span .s1{
+    position: absolute;
+    top: 0;
+    font-size: 15em;
+    font-weight:800;
+    text-transform: uppercase;
+    color: #3c4447;
+}
+span .s2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight:800;
+    font-size: 15em;
+    text-transform: uppercase;
+    color: #3c4447;
 }

@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import './post.css'
+import ShareIcon from '@mui/icons-material/Share';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function Post() {
   const [title, setTitle] = useState('')
@@ -45,6 +48,7 @@ function Post() {
         <img src="https://media.istockphoto.com/photos/freedom-chains-that-transform-into-birds-charge-concept-picture-id1322104312?s=612x612" alt="" className="left" />
 
       </div>
+      <div className="container">
       <div className="right">
         <h1>lorem10 loremloremloremloremloremloremloremloremloremloremlorem</h1>
         <div className="author">
@@ -58,8 +62,16 @@ function Post() {
           text texttext texttext texttext text
           </p>
       </div>
+      <h5>3</h5>
+      <h6>Mars</h6>
+      <ul>
+        <li><i className="far fa-eye fa-2x"></i></li>
+        <li><i className="far fah-heart fa-2x"><DeleteIcon></DeleteIcon></i></li>
+        <li><i className="far fa-envelope fa-2x"><EditIcon></EditIcon></i></li>
+        <li><i className="far fa-share-alt fa-2x"> <ShareIcon></ShareIcon></i></li>
+      </ul>
     </div>
-
+    </div>
   </>
   )
 }
