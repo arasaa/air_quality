@@ -8,7 +8,6 @@ function Footer() {
         height: 50,
         backgroundColor: "aqua",
         alignItems: "center",
-        position: "absolute",
         bottom: 0,
         justifyContent: "center",
         display: "flex",
