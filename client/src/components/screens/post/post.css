@@ -52,24 +52,107 @@
 
 
 /****/
-.container{
-    background-color: #0a7b8d;
-    color: rgb(255, 255, 255);
-}
-span .s1{
+span.s1{
     position: absolute;
     top: 0;
-    font-size: 15em;
+    font-size: 15px;
     font-weight:800;
     text-transform: uppercase;
     color: #3c4447;
 }
-span .s2 {
+span.s2 {
     position: absolute;
     bottom: 0;
     right: 0;
     font-weight:800;
-    font-size: 15em;
+    font-size: pxem;
     text-transform: uppercase;
     color: #3c4447;
+}
+.card {
+    position: relative;
+    height: 450px;
+    width: 900px;
+    margin: 200px auto;
+    background: #fff;
+    box-shadow: 7px 7px 50px 0px rgba(0, 0, 0, .7);
+}
+.thumbnail{
+    float: left;
+    position: relative;
+    left: 30px;
+    top: 30px;
+    height: 320px;
+    width: 530px;
+    box-shadow: 7px 7px 50px 0px rgba(0, 0, 0, .7);
+    overflow: hidden;
+
+}
+img.left{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: transparent(-50%, -50%);
+    height: 100%;
+    width: 100%;
+}
+.right{
+    margin-left: 590px;
+    margin-right: 20px;
+}
+h1.conH1{
+    padding-top: 15px;
+    font-size: 1.3rem;
+    color: #4b4b4b;
+}
+.author{
+    background: #9ecaff;
+    height: 30px;
+    width: 110px;
+    border-radius: 20px;
+}
+.author> img{
+    padding-top: 5px;
+    margin-left: 10px;
+    float: left;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+h2.conH2{
+    padding-top: 8px;
+    margin-right: 6px;
+    text-align: right;
+    font-size: .8rem;
+    color: #fff;
+}
+p.conP{
+    text-align: justify;
+    padding-top:10px;
+    font-size: .95rem;
+    line-height: 150%;
+    color: #4b4b4b;
+}
+h5.conH5{
+    position: absolute;
+    left: 30px;
+    bottom: -120px;
+    font-size: 6rem;
+    color: #c3c3c3;
+}
+h6.conH6{
+    position: absolute;
+    left: 30px;
+    bottom: -55px;
+    font-size: 2rem;
+    color: #c3c3c3;
+}
+ul.conUl{
+    margin-left: 250px;
+}
+li.conLi{
+    display: inline;
+    list-style: none;
+    padding-right: 40px;
+    color: #7b7b7b;
 }
