@@ -14,7 +14,8 @@ function Footer() {
         display: "flex",
       }}
     >
-      Footer
+      <p>Copyright &copy;2022</p>
+      
     </div>
   );
    
