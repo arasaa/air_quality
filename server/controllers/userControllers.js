@@ -41,7 +41,7 @@ const registerUser = asyncHandler( async (req, res) => {
                 gender: user.gender,
                 email:user.email,
                 pic:user.pic,
-                token:generateToken(user._id),
+                //token:generateToken(user._id),
             })
         }//else throw an Error
         else{
@@ -68,7 +68,7 @@ const authUser = asyncHandler( async (req, res) => {
             _id:user._id,
             FirstName:user.FirstName,
             email:user.email,
-            token:generateToken(user._id),
+            //token:generateToken(user._id),
             pic:user.pic,
             });
     
