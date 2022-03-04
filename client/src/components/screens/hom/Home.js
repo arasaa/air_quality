@@ -42,7 +42,7 @@ function Home() {
 
   const changeHandler = (event) => { setCity(event.target.value) }
   return (
-    <div className="header">
+    <div className="body">
 
       {/* <Navbar /> */}
 
