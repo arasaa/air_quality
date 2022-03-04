@@ -1,4 +1,38 @@
-import React from 'react'
+import React, { useState } from "react";
+import axios from "axios";
+function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const login = () => {
+    const data = { email: username, password: password };
+    axios.post("http://localhost:5001/user/login", data)
+    .then((response) => {console.log(response.data);})
+    .catch(err=>(console.log(err)))
+  };
+  return (
+    <div className="loginContainer">
+      {" "}
+      <label>Username:</label>{" "}
+      <input
+        type="text"
+        onChange={(event) => {
+          setUsername(event.target.value);
+        }}
+      />{" "}
+      <label>Password:</label>{" "}
+      <input
+        type="password"
+        onChange={(event) => {
+          setPassword(event.target.value);
+        }}
+      />{" "}
+      <button onClick={login}> Login </button>{" "}
+    </div>
+  );
+}
+export default Login;
+
+/* import React from 'react'
 import './login.css'
 
 function Login() {
@@ -60,7 +94,7 @@ function Login() {
                   </div>
                   <div id="register-link" class="text-right">
                     <a href="#" class="text-info">
-                     {/*  Register here */}
+                     
                     </a>
                   </div>
                 </form>
@@ -73,4 +107,4 @@ function Login() {
   );
 }
 
-export default Login
+export default Login */
