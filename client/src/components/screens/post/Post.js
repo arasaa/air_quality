@@ -13,6 +13,7 @@ function Post() {
     const poste = {title, body};
     console.log(poste);
   }
+
   return (
    <>
     <form className="postForm" onSubmit={submitHandler}>
@@ -39,38 +40,49 @@ function Post() {
     </form>
 
     <hr />
-
-    <div className="fond">
-      <span className="s1">subscribe</span>
-      <span className="s2">subscribe</span>
-    </div>
-    <div className="card">
+    <div className="card1">
       <div className="thumbnail">
         <img src="https://images.unsplash.com/photo-1453060590797-2d5f419b54cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" className="left" />
 
       </div>
 
       <div className="right">
-        <h1 className="conH1">lorem10 loremloremloremloremloremloremloremloremloremloremlorem</h1>
+        <h1 className="title">loremloremloremloremloremloremloremloremloremloremlorem</h1>
         <div className="author">
           <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
           <h2 className="conH2">Bright</h2>
         </div>
-          <div className="seperator" ></div>
-          <p className="conP">
+          <div className="seperator" >
+          <p className="postP">
              text text text text text text text text text text text texttext text text texttext text
           text texttext texttext texttext texttext texttext texttext texttext text
           text texttext texttext texttext text
+          text text text text text text text text text text text texttext text text texttext text
+          text texttext texttext texttext texttext texttext texttext texttext text
+          text texttext texttext texttext text
+          text text text text text text text text text text text texttext text text texttext text
+          text texttext texttext texttext texttext texttext texttext texttext text
+          text texttext texttext texttext text
+          text text text text text text text text text text text texttext text text texttext text
+          text texttext texttext texttext texttext texttext texttext texttext text
+          
+          
+         
           </p>
+          </div>
       </div>
-      <h5 className="conH5">3</h5>
-      <h6 className="conH6">Mars</h6>
-      <ul className="conUl">
-        <li className="conLi"><i className="far fa-eye fa-2x"></i></li>
-        <li className="conLi"><i className="far fah-heart fa-2x"><DeleteIcon></DeleteIcon></i></li>
-        <li className="conLi"><i className="far fa-envelope fa-2x"><EditIcon></EditIcon></i></li>
-        <li className="conLi"><i className="far fa-share-alt fa-2x"> <ShareIcon></ShareIcon></i></li>
+   
+      <div className="sit0">
+     
+      <ul className="sit">
+    
+        <li className="conLi"><DeleteIcon></DeleteIcon></li>
+        <li className="conLi"><EditIcon></EditIcon></li>
+        <li className="conLi"> <ShareIcon></ShareIcon></li>
       </ul>
+      <span className="dateSpan"> 3 </span>
+      <span className="dateSpan"> Mars</span>
+      </div>
     </div>
   </>
   )

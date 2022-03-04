@@ -6,20 +6,6 @@ import {Link} from 'react-router-dom'
 import './footer.css'
 function Footer() {
   return (
-    // <div
-    // //   style={{
-    // //     width: "100%",
-    // //     height: 50,
-    // //     backgroundColor: "aqua",
-    // //     alignItems: "center",
-    // //     bottom: 0,
-    // //     justifyContent: "center",
-    // //     display: "flex",
-    // //   }}
-    // // >
-    // //   <p>Copyright &copy;2022</p>
-      
-    // </div>
     <section className="footer">
         <div className="social">
             <a href="#"> <FacebookOutlinedIcon></FacebookOutlinedIcon></a>
