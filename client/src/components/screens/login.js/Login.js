@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import './login.css'
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -10,7 +11,7 @@ function Login() {
     .catch(err=>(console.log(err)))
   };
   return (
-    <div className="loginContainer">
+    <div className="login">
       {" "}
       <label>Username:</label>{" "}
       <input

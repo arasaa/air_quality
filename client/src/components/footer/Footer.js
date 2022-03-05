@@ -13,13 +13,13 @@ function Footer() {
             <a href="#"> <InstagramIcon></InstagramIcon></a>
         </div>
 
-        <ul className="list">
+        {/* <ul className="list">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/community">Community</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/registration">Registration</Link></li>
           <li><Link to="/login">Login</Link></li>
-        </ul>
+        </ul> */}
         <p className="Copyright">Air Quality &copy;2022</p>
     </section>
   );
@@ -28,3 +28,7 @@ function Footer() {
 }
 
 export default Footer
+
+
+
+

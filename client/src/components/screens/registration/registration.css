@@ -7,6 +7,7 @@
 	padding: 100px 120px 35px 40px;
 	border: 5px solid #60676e;
     margin: auto;
+    min-height: 100vh;
 }
 .Register input[type=submit],
 .Register input[type=button],
@@ -58,7 +59,7 @@
 .Register input[type=email]:focus,
 .Register input[type=email] :focus
 {
-	border-bottom: 1px dashed #D9FFA9;
+	border-bottom: 1px dashed #98d351;
 }
 
 .Register input[type=submit],
@@ -67,7 +68,7 @@
 	border: none;
 	padding: 8px 10px 8px 10px;
 	border-radius: 5px;
-	color: #A8BACE;
+	color: #071524;
 }
 .Register input[type=submit]:hover,
 .Register input[type=button]:hover{
