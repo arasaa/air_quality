@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from './components/screens/login.js/Login';
 import Registration from './components/screens/registration/Registration';
 import Community from './components/screens/community/Community';
-
+import About from './components/screens/about/About';
 
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
       <Route path="/community" element={<Community />} />
       <Route path="/login" element={<Login />} />
       <Route path="/registration" element={<Registration />} />
+      <Route path="/About" element={<About />} />
     </Routes>
     </main>
    <Footer />

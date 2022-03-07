@@ -20,7 +20,7 @@ function Footer() {
           <li><Link to="/registration">Registration</Link></li>
           <li><Link to="/login">Login</Link></li>
         </ul> */}
-        <p className="Copyright">Air Quality &copy;2022</p>
+        <p className="Copyright">Copyright &copy;2022</p>
     </section>
   );
    
