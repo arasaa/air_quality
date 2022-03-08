@@ -21,7 +21,7 @@ function App() {
       <Route path="/community" element={<Community />} />
       <Route path="/login" element={<Login />} />
       <Route path="/registration" element={<Registration />} />
-      <Route path="/About" element={<About />} />
+      <Route path="/about" element={<About />} />
     </Routes>
     </main>
    <Footer />
