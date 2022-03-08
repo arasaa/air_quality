@@ -6,7 +6,7 @@ const router = express.Router();
 //getting all routes from background
 router.route('/').get(protect, getPost)
 //create route
-router.route('/create').post(protect, createPost)
+router.route('/').post(protect, createPost)
 //updating and deleting routes by _id
 router.route('/:id').get(getPostById).put(protect, updatePost).delete(protect, deletePost)
 

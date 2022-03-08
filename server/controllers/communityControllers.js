@@ -18,7 +18,7 @@ const createPost = asyncHandler( async(req, res) => {
     //requirements from user
     const { title, content, pic } =req.body;
     //if there are any field didn't fill then
-    if (!title || !content || !pic) {
+    if (!title || !content) {
         res.status(400);
         //throw this error
         throw new Error('please fill all the fields');
