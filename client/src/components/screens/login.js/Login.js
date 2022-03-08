@@ -5,7 +5,7 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const login = () => {
-    const data = { email: username, password: password };
+    const data = { email: username, password: password};
     axios.post("http://localhost:5001/user/login", data)
     .then((response) => {console.log(response.data);})
     .catch(err=>(console.log(err)))

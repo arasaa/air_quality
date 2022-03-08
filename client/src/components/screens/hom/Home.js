@@ -51,8 +51,8 @@ function Home() {
       <input type="text" name="search" placeholder="type the city name" onChange={changeHandler} />
       <button className="btn btn-primary"Get Geolocation onClick={clickButton}>Search</button>
       </div>
-      <div>{city} (lat:{status.lat}, lon:{status.lon}) </div>
-      <div>{status.condition}  {status.temp} {status.is_day}deg  <img src={status.icon} alt="icon" /></div>
+      <div className="tempCond">{city} (lat:{status.lat}, lon:{status.lon}) </div>
+      <div className="tempCond">{status.condition}  {status.temp} {status.is_day}deg  <img src={status.icon} alt="icon" /></div>
       {/* <div>Air Quality:
         <br/>co: {status.airQuality.co}
         <br/>gb-defra-index: {status.airQuality["gb-defra-index"]}
