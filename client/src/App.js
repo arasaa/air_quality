@@ -1,6 +1,6 @@
 
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
+import Footer from './footer/Footer';
+import Header from './header/Header';
 import Home from './components/screens/hom/Home';
 import Showing from './components/screens/showingData/Showing';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
