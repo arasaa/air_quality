@@ -47,9 +47,10 @@ function Home() {
       {/* <Navbar /> */}
 
       {/* <input type="text" name="search" placeholder="type the city name" onChange={(event) => {setCity(event.target.value) }}/> */}
+      <div className="both">
       <input type="text" name="search" placeholder="type the city name" onChange={changeHandler} />
       <button className="btn btn-primary"Get Geolocation onClick={clickButton}>Search</button>
-
+      </div>
       <div>{city} (lat:{status.lat}, lon:{status.lon}) </div>
       <div>{status.condition}  {status.temp} {status.is_day}deg  <img src={status.icon} alt="icon" /></div>
       {/* <div>Air Quality:
@@ -64,9 +65,9 @@ function Home() {
         
 
       {status.airQuality["gb-defra-index"]===1?
-        <div style={{background:"green", display:"block", width: "250px", height: "30px"}}></div>
+        <div className="status" style={{background:"green", display:"block", width: "250px", height: "30px"}}></div>
         :
-        <div style={{background:"red", display:"block", width: "250px", height: "30px"}}></div>
+        <div className="status" style={{background:"red", display:"block", width: "250px", height: "30px"}}></div>
       }
      {/* <footer style={{position:"fixed",bottom:"0"}}></footer> */}
     </div>
