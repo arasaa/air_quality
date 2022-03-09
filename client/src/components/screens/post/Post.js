@@ -53,9 +53,9 @@ function Post() {
         ></input>
         <label className="postLabel">Description</label>
         <textarea
-          placeholder="description: in Berlin the weather is..."
+          placeholder="Post your experience here..."
           required
-          className="postText"
+          className="postText textArea"
           value={content}
           onChange={(e) => setContent(e.target.value)}
         ></textarea>
