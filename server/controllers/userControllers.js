@@ -1,7 +1,7 @@
 const asyncHandler = require('express-async-handler');
 const User = require('../models/userModel')
 const generateToken = require('../utils/generateToken');
-
+const jwt = require("jsonwebtoken");
 
 
 //i wrapped the register with asyncHandler to handle all the errors that may occur in the app
@@ -54,7 +54,6 @@ const registerUser = asyncHandler( async (req, res) => {
 const authUser = asyncHandler( async (req, res) => {
     //here are what we requested from a user hwo want to register
     const {email, password} = req.body;
-
     //using findeOne method from mongoose to search for our unique email
     const user = await User.findOne({email})
     //if there is something inside user and if password is correct

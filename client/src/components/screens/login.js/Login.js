@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 import './login.css'
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate()
   const login = () => {
     const data = { email: username, password: password};
     axios.post("http://localhost:5001/user/login", data)
-    .then((response) => {console.log(response.data);})
+    .then((response) => {console.log(response.data);
+      navigate("/community")
+    })
     .catch(err=>(console.log(err)))
   };
   return (
