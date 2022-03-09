@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./registration.css";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Registration = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({});
 
   function handleChange(e) {
@@ -18,9 +20,11 @@ const Registration = () => {
       url: "http://localhost:5001/user",
       method: "POST",
       data: user,
+      
     })
       .then((res) => {
         console.log(res);
+        navigate("/community");
       })
       .catch((err) => {
         console.log(err);
