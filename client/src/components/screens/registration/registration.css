@@ -27,7 +27,7 @@
 }
 .Register label > span{
 	display: inline-block;
-	float:center;
+	
 	width: 150px;
 }
 .Register input[type=text],
