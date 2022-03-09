@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-<<<<<<< Updated upstream
-import { useNavigate } from 'react-router-dom';
-=======
 import {useHistory}from ("react-router-dom");
->>>>>>> Stashed changes
 import './login.css'
 
 
