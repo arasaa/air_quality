@@ -4,7 +4,7 @@ import Header from './header/Header';
 import Home from './components/screens/hom/Home';
 import Showing from './components/screens/showingData/Showing';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Login from './components/screens/login.js/Login';
+import Login from './components/screens/login/Login';
 import Registration from './components/screens/registration/Registration';
 import Community from './components/screens/community/Community';
 import About from './components/screens/about/About';
