@@ -1,19 +1,32 @@
 import React, { useState } from "react";
 import axios from "axios";
+<<<<<<< Updated upstream
 import { useNavigate } from 'react-router-dom';
+=======
+import {useHistory}from ("react-router-dom");
+>>>>>>> Stashed changes
 import './login.css'
-function Login() {
+
+
+
+
+function Login({}) {
+  let history=useHistory()
+  history.push("/community");
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate()
   const login = () => {
-    const data = { email: username, password: password};
-    axios.post("http://localhost:5001/user/login", data)
-    .then((response) => {console.log(response.data);
-      navigate("/community")
-    })
-    .catch(err=>(console.log(err)))
+    const data = { email: username, password: password };
+    axios
+      .post("http://localhost:5001/user/login", data)
+      .then((response) => {
+        console.log(response.data);
+        
+      })
+      .catch((err) => console.log(err));
   };
   return (
     <div className="login">
@@ -21,7 +34,7 @@ function Login() {
       <label>Username:</label>{" "}
       <input
         type="text"
-        onChange={(event) => {
+        onChange={(event) => { 
           setUsername(event.target.value);
         }}
       />{" "}
@@ -32,7 +45,7 @@ function Login() {
           setPassword(event.target.value);
         }}
       />{" "}
-      <button onClick={login}> Login </button>{" "}
+      <button onClick={  login}> Login </button>{" "}
     </div>
   );
 }
