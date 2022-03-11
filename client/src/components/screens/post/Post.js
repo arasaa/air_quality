@@ -9,7 +9,7 @@ import axios from "axios";
 function Post() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
- // const [name, setName] = useState("");
+ const [postt, setPost] = useState([])
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -23,6 +23,7 @@ function Post() {
     })
       .then((res) => {
         console.log(res);
+        setPost(res)
       })
       .catch((err) => {
         console.log(err);
@@ -31,6 +32,7 @@ function Post() {
 
   return (
     <>
+   
       <form className="postForm" onSubmit={submitHandler}>
         <h1 className="postH1">Share your expires</h1>
         <label className="postLabel">Title</label>
@@ -57,7 +59,8 @@ function Post() {
       </form>
 
       <hr />
-      <div className="card1">
+      {postt && Object.values(postt).map((post) => 
+      <div className="card1" key={post._id}>
         <div className="thumbnail">
           <img
             src="https://images.unsplash.com/photo-1453060590797-2d5f419b54cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -101,6 +104,7 @@ function Post() {
           <span className="dateSpan"> Mars</span>
         </div>
       </div>
+      )}
     </>
   );
 }
