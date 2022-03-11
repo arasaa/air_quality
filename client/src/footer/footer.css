@@ -7,8 +7,13 @@
 }
 .footer .social{
     text-align: center;
-    padding-bottom: 1px;
+    padding-bottom: 2px;
     color: rgb(56, 65, 8);
+      clear: both;
+    
+    
+    margin-top: 200px
+
 }
 .footer .social a{
     font-size: 24px;
@@ -52,7 +57,7 @@
      margin-top: 15px;
      text-align: center;
      font-size: 13px; 
-     color: #aaa;
+     color: rgb(107, 24, 24);
  }
 
 
