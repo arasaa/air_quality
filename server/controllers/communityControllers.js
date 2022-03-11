@@ -7,7 +7,8 @@ const asyncHandler = require('express-async-handler')
 const getPost = asyncHandler(async(req, res) => {
     //mongoDB query
     //find all posts that belong to that particular user
-    const post = await Post.find({user: req.user._id});
+    const post = await Post.find({user: req.user._id})
+    .populate('user', "-password")
     res.json(post)
 
 
@@ -15,22 +16,25 @@ const getPost = asyncHandler(async(req, res) => {
 
 //handling create post
 const createPost = asyncHandler( async(req, res) => {
+    console.log('createPost');
     //requirements from user
-    const { title, content, pic } =req.body;
+    const { title, content } =req.body;
+    console.log('req body',req.body);
     //if there are any field didn't fill then
     if (!title || !content) {
+        console.log('line 22');
         res.status(400);
         //throw this error
-        throw new Error('please fill all the fields');
-    }//if all fields are filled then create a new post
-    else{
-        const post = new Post ({user: req.user._id, title, content, pic});
-
+       // throw new Error('please fill all the fields');
+    } else{
+        console.log('this is user request',req.user._id);
+       
+        const post = await Post.create({user: req.user._id, title, content});
         //save them in the database
-        const createdPost = await post.save();
+       // const createdPost = await post.save();
 
         //receive it here and sendet to user
-        res.status(201).json(createdPost)
+        res.status(201).json(post)
     }
 });
 
@@ -101,3 +105,6 @@ const deletePost = asyncHandler( async (req, res) => {
 })
 
 module.exports = {getPost, createPost, getPostById, updatePost, deletePost}
+
+
+

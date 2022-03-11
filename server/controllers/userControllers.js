@@ -1,6 +1,6 @@
 const asyncHandler = require('express-async-handler');
 const User = require('../models/userModel')
-const generateToken = require('../utils/generateToken');
+const {generateToken} = require('../utils/generateToken');
 const jwt = require("jsonwebtoken");
 
 
@@ -61,18 +61,22 @@ const authUser = asyncHandler( async (req, res) => {
     if(user && (await user.matchPassword(password))) {
         //if user was found and password is correct then
         //response users data
-        res.json({
+        const token = generateToken(user._id);
+         res.cookie("jwt", token);
+       return res.json({
             _id:user._id,
             FirstName:user.FirstName,
             email:user.email,
-            token:generateToken(user._id),
+            token:token,
             pic:user.pic,
+
             });
-        }//else throw an Error
-        else{
-                res.status(400);
-                throw new Error("password or email is incorrect");
-        }
+            
+    }//else throw an Error
+    else{
+            res.status(400);
+            throw new Error("password or email is incorrect");
+    }
 
     
 });
