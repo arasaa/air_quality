@@ -1,7 +1,8 @@
 .postForm{
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: center;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    /**text-align:center;**/
 }
 .postH1{
     font-size: 20px;
@@ -14,13 +15,38 @@
     display: block;
 }
 
-.postImg, .postInput, .postText{
-    width: 100%;
+.postImg, .postText{
+    width: 20rem;
     padding: 6px 10px;
     margin: 10px 0px;
     border: 1px solid #ddd;
     box-sizing: border-box;
-    display: block;
+}
+.postInput{
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: 'heebo', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    width: 20rem;
+    transition: all 0.2s;
+}
+.postInput:hover{
+    cursor: pointer;
+    background-color: #eeeeee;
+
+}
+.postInput:focus{
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #3b8a86;
+    
 }
 .postBtn {
     border: 0;
@@ -157,7 +183,7 @@ li.conLi{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.4;
-    width: 250px;
+    width: 20rem;
     height: 100px;
     transition: all 0.2s;
 
