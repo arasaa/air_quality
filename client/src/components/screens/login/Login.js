@@ -16,7 +16,7 @@ function Login({}) {
   const login = () => {
     const data = { email: username, password: password };
     axios
-      .post("http://localhost:5001/user/login", data)
+      .post("http://localhost:5000/user/login", data)
       .then((response) => {
         console.log(response.data);
         navigate("/community");

@@ -6,27 +6,18 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 
 
-
-
-
 function Post() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+ // const [name, setName] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
     const poste = { title, content};
     console.log(poste);
-
-    localStorage.setItem('Bearer', JSON.stringify(poste))
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      Authorization: `Bearer {token}`
-    }}
     //request to backend
     axios({
-      url: "http://localhost:5001/community",config,
+      url: "http://localhost:5000/community",
       method: "POST",
       data: poste,
     })
@@ -77,29 +68,18 @@ function Post() {
 
         <div className="right">
           <h1 className="title">
-            loremloremloremloremloremloremloremloremloremloremlorem
+            {title}
           </h1>
           <div className="author">
             <img
               src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
               alt=""
             />
-            <h2 className="conH2">Bright</h2>
+            <h2 className="conH2">bright</h2>
           </div>
           <div className="seperator">
             <p className="postP">
-              text text text text text text text text text text text texttext
-              text text texttext text text texttext texttext texttext texttext
-              texttext texttext texttext text text texttext texttext texttext
-              text text text text text text text text text text text text
-              texttext text text texttext text text texttext texttext texttext
-              texttext texttext texttext texttext text text texttext texttext
-              texttext text text text text text text text text text text text
-              text texttext text text texttext text text texttext texttext
-              texttext texttext texttext texttext texttext text text texttext
-              texttext texttext text text text text text text text text text
-              text text text texttext text text texttext text text texttext
-              texttext texttext texttext texttext texttext texttext text
+             {content}
             </p>
           </div>
         </div>

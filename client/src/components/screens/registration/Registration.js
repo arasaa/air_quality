@@ -15,7 +15,7 @@ const Registration = () => {
 
     //request to backend
     axios({
-      url: "http://localhost:5001/user",
+      url: "http://localhost:5000/user",
       method: "POST",
       data: user,
     })
