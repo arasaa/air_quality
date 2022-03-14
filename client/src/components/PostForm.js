@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+//import PostList from './PostList';
 
-const PostForm = ({setPost, userName}) => {
+const PostForm = ({userName}) => {
 
   
   // const [content, setContent] = useState("");
@@ -61,7 +62,9 @@ const PostForm = ({setPost, userName}) => {
 
         <button className="postBtn postButton" onClick={userName}> post</button>
       </form>
+      
     </div>
+    
   )
 }
 
