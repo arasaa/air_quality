@@ -3,13 +3,13 @@ import ShareIcon from "@mui/icons-material/Share";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from 'axios';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PostForm from "./PostForm";
 
-const PostList = () => {
+const PostList = ({deletePost}) => {
   const [postt, setPost] = useState([])
 
-  const userName = () =>{
+  const getPosts = () =>{
     axios({
       url: "http://localhost:5000/community",
       method: "GET",
@@ -22,10 +22,13 @@ const PostList = () => {
         console.log(err);
       });
     }
+    useEffect(()=>{
+        getPosts()
+    },[])
 
   return (
     <div>
-      <PostForm userName={userName}/>
+      
 
       
          {postt && Object.values(postt).map((post) => 
@@ -59,7 +62,7 @@ const PostList = () => {
         <div className="sit0">
           <ul className="sit">
             <li className="conLi">
-              <DeleteIcon></DeleteIcon>
+              <DeleteIcon onClick={() => deletePost(post._id)} className="deleteIqon"></DeleteIcon>
             </li>
             <li className="conLi">
               <EditIcon></EditIcon>

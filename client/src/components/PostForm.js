@@ -2,23 +2,15 @@ import axios from 'axios';
 import React, { useState } from 'react'
 //import PostList from './PostList';
 
-const PostForm = ({userName}) => {
+const PostForm = ({getPosts}) => {
 
-  
-  // const [content, setContent] = useState("");
-  // const [title, setTitle] = useState("");
   const [form, setForm] = useState({title: "", content: ""})
   const handleChange = (e) => {
     setForm({...form, [e.target.name]:e.target.value});
   }
 
   const submitHandler = (e) => {
-    e.preventDefault();
-    
-    //const poste = { title, content };
-    console.log(form);
-    //request to backend
-    
+    e.preventDefault();    
     axios({
       url: "http://localhost:5000/community",
       method: "POST",
@@ -60,7 +52,7 @@ const PostForm = ({userName}) => {
 
         <img src="#" className="postImg" alt="post" />
 
-        <button className="postBtn postButton" onClick={userName}> post</button>
+        <button className="postBtn postButton" onClick={getPosts}> post</button>
       </form>
       
     </div>

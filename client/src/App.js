@@ -6,7 +6,7 @@ import Showing from './components/screens/showingData/Showing';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from './components/screens/login/Login';
 import Registration from './components/screens/registration/Registration';
-import Community from './components/screens/community/Community';
+import Community from './components/screens/Community/Community';
 import About from './components/screens/about/About';
 
 

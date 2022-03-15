@@ -1,34 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import PostList from "../../PostList";
 import "./post.css";
+import axios from "axios";
 //import PostForm from "../../PostForm";
 
 
-function Post() {
-  //const [postt, setPost] = useState([])
-
-  //import axios from "axios";
- // const [User, setName] = useState([])
- // const userName = () =>{
-  //   axios({
-  //     url: "http://localhost:5000/community",
-  //     method: "GET",
-  //   })
-  //     .then((res) => {
-  //       setPost(res.data)
-  //       console.log(res.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  //   }userName={userName} User={User}
-
-  //<PostItem postt={postt} />
-  //<PostForm  />
+function Post({post}) {
+  const deletePost = (id) => {
+    axios.delete(`http://localhost:5000/community/${id}`)
+    .then(res => console.log('DELETED', res))
+    .catch(err => console.log(err))
+   
+  }
 
   return (
     <> 
-    <PostList />
+    <PostList deletePost={deletePost} />
     </>
   );
 
