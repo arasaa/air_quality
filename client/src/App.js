@@ -2,7 +2,6 @@
 import Footer from './footer/Footer';
 import Header from './header/Header';
 import Home from './components/screens/hom/Home';
-import Showing from './components/screens/showingData/Showing';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from './components/screens/login/Login';
 import Registration from './components/screens/registration/Registration';
@@ -17,7 +16,6 @@ function App() {
     <main>
       <Routes>
       <Route path="/" element={<Home />} exact />
-      <Route path="/showing" element={<Showing />} />
       <Route path="/community" element={<Community />} />
       <Route path="/login" element={<Login />} />
       <Route path="/registration" element={<Registration />} />
