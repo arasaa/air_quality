@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ShareIcon from "@mui/icons-material/Share";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -15,6 +15,28 @@ const Post = ({post,getPosts}) => {
 
     .catch(err => console.log(err))
   }
+
+  // const [updatePost, setUpdatePst] = useState()
+  // const editPost = () => {
+  //   axios.put(`http://localhost:5000/community/${updatePost._id}`)
+  //   .then(res => setUpdatePst({
+  //     updatedAt: res.data.updatedAt
+  //    // console.log('EDIT', res)
+  //   }))
+
+  //   .catch(err => console.log('error from update',err))
+  // }
+
+  //const updatePost = {title: post.title}
+  const updatePost = () => {
+    axios.put(`http://localhost:5000/community/${post._id}`,post)
+    .then(res =>{
+     // console.log('EDIT', res)
+    })
+
+    .catch(err => console.log('error from update',err))
+  }
+
   return (
     <div>
  <div className="card1">
@@ -44,10 +66,10 @@ const Post = ({post,getPosts}) => {
    <div className="sit0">
      <ul className="sit">
        <li className="conLi">
-         <DeleteIcon onClick={deletePost} className="deleteIqon"></DeleteIcon>
+         <DeleteIcon onClick={deletePost} className="deleteIcon"></DeleteIcon>
        </li>
        <li className="conLi">
-         <EditIcon></EditIcon>
+         <EditIcon onClick={updatePost} className="editIcon"></EditIcon>
        </li>
        <li className="conLi">
          {" "}

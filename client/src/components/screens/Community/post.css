@@ -168,7 +168,10 @@ li.conLi{
     padding-right: 40px;
     color: #7b7b7b;
 }
-.deleteIqon{
+.deleteIcon{
+    cursor: pointer;
+}
+.editIcon{
     cursor: pointer;
 }
 
