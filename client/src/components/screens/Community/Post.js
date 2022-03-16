@@ -9,8 +9,8 @@ import Share from './Share';
 
 const Post = ({post,getPosts, setPosts}) => {
   //const location = useLocation()
-  const [openModl, setOpenModl] = useState(false)
   const [openShare, setOpenShare] = useState()
+  const [openModl, setOpenModl] = useState(false)
   const deletePost = () => {
     axios.delete(`http://localhost:5000/community/${post._id}`)
     .then(res => {
@@ -53,15 +53,17 @@ const Post = ({post,getPosts, setPosts}) => {
          <DeleteIcon onClick={deletePost} className="deleteIcon"></DeleteIcon>
        </li>
        <li className="conLi">
-         <EditIcon  className="editIcon"></EditIcon>
+         <EditIcon onClick={()=>setOpenModl(!openModl)}  className="editIcon"></EditIcon>
        </li>
        <li className="conLi">
          {" "}
          <ShareIcon onClick={()=>setOpenShare(!openShare)} className="shareIcon"></ShareIcon>
        </li>
      </ul>
-     <span className="dateSpan"> 3 </span>
-     <span className="dateSpan"> Mars</span>
+     <div className="dateSpan">
+     <span className="date"> created at </span>
+     <span> { ` ${post.createdAt}`}</span>
+     </div>
    </div>
    <div>
       {openModl && <Update post={post} setOpenModl={setOpenModl} setPosts={setPosts}/>} 

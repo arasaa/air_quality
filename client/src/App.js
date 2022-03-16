@@ -7,6 +7,7 @@ import Login from './components/screens/login/Login';
 import Registration from './components/screens/registration/Registration';
 import Community from './components/screens/Community/Community';
 import About from './components/screens/about/About';
+import Modal from './components/screens/Community/modal/modal';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/registration" element={<Registration />} />
       <Route path="/about" element={<About />} />
+      <Route path="/modal" element={<Modal />} />      
     </Routes>
     </main>
    <Footer />

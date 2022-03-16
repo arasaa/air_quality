@@ -1,12 +1,8 @@
 import React from 'react'
-import {FacebookShareButton, } from "react-share";
-import {
-   
-    FacebookIcon
-  } from "react-share"
+import {FacebookShareButton, WhatsappShareButton, TwitterShareButton, TelegramShareButton} from "react-share";
+import {FacebookIcon, TelegramIcon, TwitterIcon, WhatsappIcon,} from "react-share"
 
 const Share = ({setOpenShare}) => {
-    const shareURL = "https://www.facebook.com/"
     const shareLink = () =>{
         setOpenShare(false)
     }
@@ -19,6 +15,19 @@ const Share = ({setOpenShare}) => {
             {shareCount => <span className="myShareCountWrapper">{shareCount}</span>}
             <FacebookIcon size={60} round={true}/>
         </FacebookShareButton >
+
+        <TwitterShareButton url={"https://twitter.com/" }>
+        <TwitterIcon size={60} round={true} />
+          
+        </TwitterShareButton>
+
+        <WhatsappShareButton url={"https://web.whatsapp.com/" }>
+        <WhatsappIcon size={60} round={true} />
+        </WhatsappShareButton>
+
+        <TelegramShareButton url={"https://web.telegram.org/k/" }>
+        <TelegramIcon size={60} round={true} />
+        </TelegramShareButton>
     </div></div>
   )
 }
