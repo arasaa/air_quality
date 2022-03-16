@@ -5,10 +5,12 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import "./post.css";
 import axios from 'axios';
 import Update from './Update';
+import Share from './Share';
 
 const Post = ({post,getPosts, setPosts}) => {
   //const location = useLocation()
   const [openModl, setOpenModl] = useState(false)
+  const [openShare, setOpenShare] = useState()
   const deletePost = () => {
     axios.delete(`http://localhost:5000/community/${post._id}`)
     .then(res => {
@@ -18,20 +20,6 @@ const Post = ({post,getPosts, setPosts}) => {
 
     .catch(err => console.log(err))
   }
-
-  // const [updatePost, setUpdatePst] = useState()
-  // const editPost = () => {
-  //   axios.put(`http://localhost:5000/community/${updatePost._id}`)
-  //   .then(res => setUpdatePst({
-  //     updatedAt: res.data.updatedAt
-  //    // console.log('EDIT', res)
-  //   }))
-
-  //   .catch(err => console.log('error from update',err))
-  // }
-
-  //const update = {title: post.title}
-
   
   return (
     <div>
@@ -65,11 +53,11 @@ const Post = ({post,getPosts, setPosts}) => {
          <DeleteIcon onClick={deletePost} className="deleteIcon"></DeleteIcon>
        </li>
        <li className="conLi">
-         <EditIcon onClick={()=>setOpenModl(!openModl)} className="editIcon"></EditIcon>
+         <EditIcon  className="editIcon"></EditIcon>
        </li>
        <li className="conLi">
          {" "}
-         <ShareIcon></ShareIcon>
+         <ShareIcon onClick={()=>setOpenShare(!openShare)} className="shareIcon"></ShareIcon>
        </li>
      </ul>
      <span className="dateSpan"> 3 </span>
@@ -77,6 +65,9 @@ const Post = ({post,getPosts, setPosts}) => {
    </div>
    <div>
       {openModl && <Update post={post} setOpenModl={setOpenModl} setPosts={setPosts}/>} 
+   </div>
+   <div>
+   {openShare && <Share setOpenShare={setOpenShare} />}
    </div>
 
  </div>
