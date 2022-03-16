@@ -2,7 +2,7 @@ import React from 'react'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import {Link} from 'react-router-dom'
+//import {Link} from 'react-router-dom'
 import './footer.css'
 function Footer() {
   return (

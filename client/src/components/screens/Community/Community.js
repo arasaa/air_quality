@@ -50,8 +50,10 @@ const [posts, setPosts] = useState([])
   
   return (
     <div>
-      <PostForm />
-      <PostList posts={posts} getPosts={getPosts}/>
+      <PostForm submitHandler={submitHandler} handleChange={handleChange} form={form}/>
+      <PostList posts={posts} getPosts={getPosts} form={form}
+      handleChange={handleChange} setPosts={setPosts}
+      />
     </div>
   )
 }

@@ -4,8 +4,11 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./post.css";
 import axios from 'axios';
+import Update from './Update';
 
-const Post = ({post,getPosts}) => {
+const Post = ({post,getPosts, setPosts}) => {
+  //const location = useLocation()
+  const [openModl, setOpenModl] = useState(false)
   const deletePost = () => {
     axios.delete(`http://localhost:5000/community/${post._id}`)
     .then(res => {
@@ -27,16 +30,9 @@ const Post = ({post,getPosts}) => {
   //   .catch(err => console.log('error from update',err))
   // }
 
-  //const updatePost = {title: post.title}
-  const updatePost = () => {
-    axios.put(`http://localhost:5000/community/${post._id}`,post)
-    .then(res =>{
-     // console.log('EDIT', res)
-    })
+  //const update = {title: post.title}
 
-    .catch(err => console.log('error from update',err))
-  }
-
+  
   return (
     <div>
  <div className="card1">
@@ -69,7 +65,7 @@ const Post = ({post,getPosts}) => {
          <DeleteIcon onClick={deletePost} className="deleteIcon"></DeleteIcon>
        </li>
        <li className="conLi">
-         <EditIcon onClick={updatePost} className="editIcon"></EditIcon>
+         <EditIcon onClick={()=>setOpenModl(!openModl)} className="editIcon"></EditIcon>
        </li>
        <li className="conLi">
          {" "}
@@ -78,6 +74,9 @@ const Post = ({post,getPosts}) => {
      </ul>
      <span className="dateSpan"> 3 </span>
      <span className="dateSpan"> Mars</span>
+   </div>
+   <div>
+      {openModl && <Update post={post} setOpenModl={setOpenModl} setPosts={setPosts}/>} 
    </div>
 
  </div>

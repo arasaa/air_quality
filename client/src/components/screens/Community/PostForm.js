@@ -1,10 +1,10 @@
 import React from 'react'
 
-const postForm = ({getPosts}) => {
+const postForm = ({getPosts, submitHandler, handleChange, form}) => {
   return (
+
     <div>
-         <div>
-       <form className="postForm">
+       <form className="postForm" onSubmit={submitHandler}>
         <h1 className="postH1">Share your expires</h1>
         <label className="postLabel">Title</label>
         <input
@@ -13,6 +13,8 @@ const postForm = ({getPosts}) => {
           required
           placeholder="title"
           className="postInput"
+          value={form.title}
+          onChange={handleChange}
         ></input>
         <label className="postLabel">Description</label>
         <textarea
@@ -20,15 +22,53 @@ const postForm = ({getPosts}) => {
           required
           className="postText textArea"
           name="content"
+          value={form.content}
+          onChange={handleChange}
         ></textarea>
 
         <img src="#" className="postImg" alt="post" />
 
-        <button className="postBtn postButton"> post</button>
+        <button className="postBtn postButton" onClick={getPosts}> post</button>
       </form>
+
+    </div>
+    // <div>
+    //      <div>
+    //    <form className="postForm">
+    //     <h1 className="postH1">Share your expires</h1>
+    //     <label className="postLabel">Title</label>
+    //     <input
+    //       type="text"
+    //       name="title"
+    //       required
+    //       placeholder="title"
+    //       className="postInput"
+    //     ></input>
+    //     <label className="postLabel">Description</label>
+    //     <textarea
+    //       placeholder="Post your experience here..."
+    //       required
+    //       className="postText textArea"
+    //       name="content"
+    //     ></textarea>
+
+    //     <img src="#" className="postImg" alt="post" />
+
+    //     <button className="postBtn postButton"> post</button>
+    //   </form>
       
-    </div>
-    </div>
+    // </div>
+    // </div>
+
+
+
+
+
+
+
+
+
+
   )
 }
 
