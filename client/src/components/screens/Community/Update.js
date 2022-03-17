@@ -2,9 +2,9 @@ import axios from 'axios'
 import React, { useState } from 'react'
 
 
-const Update = ({post, setOpenModl}) => {
+const Update = ({post, setOpenModl, getPosts}) => {
 
-  const [updateForm, setUpdateForm] = useState({title: "", content: ""})
+  const [updateForm, setUpdateForm] = useState({title: post.title, content: post.content})
   const changeHandler = (e) => {
     setUpdateForm({...updateForm, [e.target.name]:e.target.value});
   }

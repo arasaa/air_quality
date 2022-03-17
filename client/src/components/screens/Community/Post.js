@@ -6,6 +6,10 @@ import "./post.css";
 import axios from 'axios';
 import Update from './Update';
 import Share from './Share';
+import RenderModal from './modal/RenderModal';
+import Modal from './modal/Modal';
+//import closeIcon from "../../../assets/close.png";
+//import closeIcon from '../../assets/close.png'
 
 const Post = ({post,getPosts, setPosts}) => {
   //const location = useLocation()
@@ -22,7 +26,8 @@ const Post = ({post,getPosts, setPosts}) => {
   }
   
   return (
-    <div>
+    <div id={post._id}>
+      {console.log(post._id)}
  <div className="card1">
    <div className="thumbnail">
       <img
@@ -69,7 +74,8 @@ const Post = ({post,getPosts, setPosts}) => {
       {openModl && <Update post={post} setOpenModl={setOpenModl} setPosts={setPosts}/>} 
    </div>
    <div>
-   {openShare && <Share setOpenShare={setOpenShare} />}
+   {/* {openShare && <Share setOpenShare={setOpenShare} />} */}
+   {openShare && <Share openShare={openShare} setOpenShare={setOpenShare}/>}
    </div>
 
  </div>

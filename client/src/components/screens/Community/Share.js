@@ -1,17 +1,25 @@
 import React from 'react'
 import {FacebookShareButton, WhatsappShareButton, TwitterShareButton, TelegramShareButton} from "react-share";
 import {FacebookIcon, TelegramIcon, TwitterIcon, WhatsappIcon,} from "react-share"
+import Modal from './modal/Modal'
+import GlobalStyles from "./modal/GlobalStyles";
+const Share = ({setOpenShare,openShare,isOpen,setOpen}) => {
 
-const Share = ({setOpenShare}) => {
     const shareLink = () =>{
         setOpenShare(false)
     }
     //setOpenShare()
   return (
+    <>
+    <GlobalStyles />
     <div>
-        <h1 className="postH1">Share</h1>
-       <div>
-        <FacebookShareButton url={"https://www.facebook.com/" }>
+ 
+        <div style={{ transform: "translateX(50px)" }}>
+        
+        <Modal isOpen={openShare} close={() => setOpenShare(false)}>
+          <h2>share</h2>
+          <div>
+          <FacebookShareButton url={"https://www.facebook.com/" }>
             {shareCount => <span className="myShareCountWrapper">{shareCount}</span>}
             <FacebookIcon size={60} round={true}/>
         </FacebookShareButton >
@@ -28,7 +36,11 @@ const Share = ({setOpenShare}) => {
         <TelegramShareButton url={"https://web.telegram.org/k/" }>
         <TelegramIcon size={60} round={true} />
         </TelegramShareButton>
-    </div></div>
+          </div>
+        </Modal>
+        </div>
+        </div>
+        </>
   )
 }
 

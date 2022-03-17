@@ -2,11 +2,12 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import PostForm from './PostForm';
 import PostList from './PostList';
-
+import {useNavigate} from 'react-router-dom'
 const Community = () => {
 
 
 const [posts, setPosts] = useState([])
+const navigate = useNavigate()
   /////////////////////////////////////////////////////////////////////////
   const getPosts = () =>{
     axios({
@@ -24,6 +25,7 @@ const [posts, setPosts] = useState([])
     ///////////////////////////////////////////////////////////////////////
     useEffect(()=>{
         getPosts()
+        //navigate(post._id)
     },[])
   //////////////////////////////////////////////////////////////////////////
   const [form, setForm] = useState({title: "", content: ""})
