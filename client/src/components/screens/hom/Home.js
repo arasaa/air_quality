@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import "./home.css"
 
-
 function Home() {
 
 //define STATE variable in react
@@ -42,17 +41,26 @@ function Home() {
 
   const changeHandler = (event) => { setCity(event.target.value) }
   return (
-    <div className="body">
+    <div className="api">
 
       {/* <Navbar /> */}
 
       {/* <input type="text" name="search" placeholder="type the city name" onChange={(event) => {setCity(event.target.value) }}/> */}
-      <div className="both">
+      <div >
       <input type="text" name="search" placeholder="type the city name" onChange={changeHandler} />
       <button className="btn btn-primary"Get Geolocation onClick={clickButton}>Search</button>
-      </div>
+      
+      <div className="tempCond">
+        <ul className="status">
       <div className="tempCond">{city} (lat:{status.lat}, lon:{status.lon}) </div>
-      <div className="tempCond">{status.condition}  {status.temp} {status.is_day}deg  <img src={status.icon} alt="icon" /></div>
+          <li>{status.condition} </li>
+          <img src={status.icon} alt="icon" />
+          <li> {status.temp}</li>
+          <li>{status.is_day}deg </li>
+        </ul>
+        </div>
+     
+      </div>
       {/* <div>Air Quality:
         <br/>co: {status.airQuality.co}
         <br/>gb-defra-index: {status.airQuality["gb-defra-index"]}
@@ -65,9 +73,9 @@ function Home() {
         
 
       {status.airQuality["gb-defra-index"]===1?
-        <div className="status" style={{background:"green", display:"block", width: "250px", height: "30px"}}></div>
+        <div className="green" ></div>
         :
-        <div className="status" style={{background:"red", display:"block", width: "250px", height: "30px"}}></div>
+        <div className="red"></div>
       }
      {/* <footer style={{position:"fixed",bottom:"0"}}></footer> */}
     </div>

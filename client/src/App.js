@@ -9,6 +9,7 @@ import Community from './components/screens/Community/Community';
 import About from './components/screens/about/About';
 import Share from './components/screens/Community/Share';
 import Api from './components/map-api/Api';
+import Fetch from './components/map-api/Fetch';
 //import RenderModal from './components/screens/Community/modal/RenderModal';
 //import Modal from './components/screens/Community/modal/Modal';
 
@@ -25,7 +26,8 @@ function App() {
       <Route path="/registration" element={<Registration />} />
       <Route path="/about" element={<About />} />
       <Route path="/share" element={<Share />} />
-      {/* <Route path="/api" element={<Api />} />  */}
+      <Route path="/api" element={<Api />} /> 
+      <Route path="/fetch" element={<Fetch />} />
     </Routes>
     </main>
    <Footer />

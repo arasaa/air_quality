@@ -11,13 +11,10 @@
   align-items: center;
   min-height: 100vh;
 }
-.status{
-  border: 0.1px solid rgb(173, 237, 248);
-  box-shadow: 2px 0.1px 15px 7px rgb(15, 211, 218);
-}
-img{
-  width: 10vw;
-  border-radius:50%;
+.both{
+  position: relative;
+  bottom: 3rem;
+  left: 8rem;  
 }
 
 .green{
@@ -30,7 +27,9 @@ img{
  }
  .green::before{
    content: 'dddddddddd';
- 
+   /* width: 250px; */
+   /* top: 70px;
+   left: 100px; */
    color: transparent;
    font-size: 5em;
    text-decoration-style: wavy;
@@ -47,6 +46,9 @@ img{
      transform: translateX(-50px)
    }
  }
+
+
+
 
 .red{
  display: flex;
