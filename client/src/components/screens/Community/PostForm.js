@@ -3,7 +3,7 @@ import React from 'react'
 const postForm = ({getPosts, submitHandler, handleChange, form}) => {
   return (
 
-    <div>
+    <div style={{marginBottom:"5rem"}}>
        <form className="postForm" onSubmit={submitHandler}>
         <h1 className="postH1">Share your expires</h1>
         <label className="postLabel">Title</label>

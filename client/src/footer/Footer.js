@@ -11,7 +11,7 @@ function Footer() {
             <a href="#"> <FacebookOutlinedIcon></FacebookOutlinedIcon></a>
             <a href="#"> <TwitterIcon></TwitterIcon></a>
             <a href="#"> <InstagramIcon></InstagramIcon></a>
-        </div>
+        
 
         {/* <ul className="list">
           <li><Link to="/">Home</Link></li>
@@ -21,6 +21,7 @@ function Footer() {
           <li><Link to="/login">Login</Link></li>
         </ul> */}
         <p className="Copyright">Copyright &copy;2022</p>
+        </div>
     </section>
   );
    

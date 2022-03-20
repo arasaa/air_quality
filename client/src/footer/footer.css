@@ -1,18 +1,18 @@
 .footer{
-    margin-top: 10rem;
     margin-bottom:-100px;
-    padding-top:3rem;
     background-color: aqua;
-    
+    display: flex;
+justify-content: center;
+align-content: flex-end;
 }
 .footer .social{
     text-align: center;
     padding-bottom: 2px;
     color: rgb(56, 65, 8);
       clear: both;
+     
     
-    
-    margin-top: 200px
+    margin-top: 20px
 
 }
 .footer .social a{

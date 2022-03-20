@@ -42,6 +42,7 @@ function Home() {
 
   const changeHandler = (event) => { setCity(event.target.value) }
   return (
+    
     <div className="api">
 
       {/* <input type="text" name="search" placeholder="type the city name" onChange={changeHandler} /> */}
@@ -56,16 +57,17 @@ function Home() {
       </span>
       </div>
 
+       <div className="status">
 
-        <ul className="status">
-      <div className="tempCond">{city} (lat:{status.lat}, lon:{status.lon}) </div>
+        <ul >
+      <li >{city} (lat:{status.lat}, lon:{status.lon}) </li>
           <li>{status.condition} </li>
-          <img src={status.icon} alt="icon" />
           <li> {status.temp}</li>
           <li>{status.is_day}deg </li>
+          <img src={status.icon} alt="icon" />
         </ul>
        
-       <div>Air Quality:
+         Air Quality:
         <br/>co: {status.airQuality.co}
         <br/>gb-defra-index: {status.airQuality["gb-defra-index"]}
         <br/>no2: {status.airQuality.no2}
@@ -73,7 +75,8 @@ function Home() {
         <br/>o3: {status.airQuality.o3}
         <br/>pm2_5:  {status.airQuality.pm2_5}
         <br/>pm10: {status.airQuality.pm10}
-        <br/>so2: {status.airQuality.so2} </div> 
+        <br/>so2: {status.airQuality.so2}
+        
         
 
       {status.airQuality["gb-defra-index"]===1?
@@ -81,6 +84,7 @@ function Home() {
         :
         <div className="red"></div>
       }
+      </div> 
     </div>
     
   )
