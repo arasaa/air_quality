@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import "./home.css"
+import SearchIcon from '@mui/icons-material/Search';
 
 function Home() {
 
@@ -43,14 +44,19 @@ function Home() {
   return (
     <div className="api">
 
-      {/* <Navbar /> */}
-
-      {/* <input type="text" name="search" placeholder="type the city name" onChange={(event) => {setCity(event.target.value) }}/> */}
-      <div >
-      <input type="text" name="search" placeholder="type the city name" onChange={changeHandler} />
-      <button className="btn btn-primary"Get Geolocation onClick={clickButton}>Search</button>
+      {/* <input type="text" name="search" placeholder="type the city name" onChange={changeHandler} /> */}
+      {/* <button className="btn btn-primary"Get Geolocation onClick={clickButton}>Search</button> */}
       
-      <div className="tempCond">
+      <div  className="search-boxx" >
+      <input className='input_text' placeholder="City Name" style={{background: 'none', border: 'none', outline: 'none', color: 'white'
+    , padding: '0px'  ,float: 'left',lineHeight:'40px', width: '75px'
+  }} onChange={changeHandler} />
+      <span className="a-search">
+  <SearchIcon  Get Geolocation onClick={clickButton}></SearchIcon>
+      </span>
+      </div>
+
+
         <ul className="status">
       <div className="tempCond">{city} (lat:{status.lat}, lon:{status.lon}) </div>
           <li>{status.condition} </li>
@@ -58,10 +64,8 @@ function Home() {
           <li> {status.temp}</li>
           <li>{status.is_day}deg </li>
         </ul>
-        </div>
-     
-      </div>
-      {/* <div>Air Quality:
+       
+       <div>Air Quality:
         <br/>co: {status.airQuality.co}
         <br/>gb-defra-index: {status.airQuality["gb-defra-index"]}
         <br/>no2: {status.airQuality.no2}
@@ -69,7 +73,7 @@ function Home() {
         <br/>o3: {status.airQuality.o3}
         <br/>pm2_5:  {status.airQuality.pm2_5}
         <br/>pm10: {status.airQuality.pm10}
-        <br/>so2: {status.airQuality.so2} </div> */}
+        <br/>so2: {status.airQuality.so2} </div> 
         
 
       {status.airQuality["gb-defra-index"]===1?
@@ -77,7 +81,6 @@ function Home() {
         :
         <div className="red"></div>
       }
-     {/* <footer style={{position:"fixed",bottom:"0"}}></footer> */}
     </div>
     
   )

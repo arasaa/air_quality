@@ -26,7 +26,7 @@ function App() {
       <Route path="/registration" element={<Registration />} />
       <Route path="/about" element={<About />} />
       <Route path="/share" element={<Share />} />
-      <Route path="/api" element={<Api />} /> 
+      <Route path="/api" element={<Api />} />  
       <Route path="/fetch" element={<Fetch />} />
     </Routes>
     </main>
