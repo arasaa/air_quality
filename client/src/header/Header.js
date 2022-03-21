@@ -4,20 +4,24 @@ import './header.css'
 
 function Header() {
   return (
-  
-      <header>
-        <div className="logo"><Link to="/">Air Quality</Link></div>
-      <nav>
-        <ul className="navLinks">
-          <li><Link to="/">Home</Link></li>
+    <div>
+        <nav>
+       <div className="logo1">Logo</div>
+        <input type="checkbox" id="click1" />
+        <label htmlFor="click1" className="menu-btn">
+          <i className="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li><Link to="/" className="active">Home</Link></li>
           <li><Link to="/community" >Community</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/registration">Registration</Link></li>
           <li><Link to="/login">Login</Link></li>
         </ul>
-      </nav>
-      </header>
-  
+     </nav>
+     <div className="content">
+     </div>
+    </div>
   )
 }
 

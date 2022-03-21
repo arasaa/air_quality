@@ -17,7 +17,7 @@ import Fetch from './components/map-api/Fetch';
 function App() {
   return (
    <BrowserRouter>
-    <Header />
+     <Header />
     <main>
       <Routes>
       <Route path="/" element={<Home />} exact />
