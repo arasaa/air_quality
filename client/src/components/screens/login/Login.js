@@ -17,7 +17,7 @@ function Login({}) {
   const login = () => {
     const data = { email: username, password: password };
     axios
-      .post("http://localhost:5000/user/login", data)
+      .post("http://localhost:5001/user/login", data)
       .then((response) => {
         console.log(response.data);
         setLoading(true);
@@ -35,7 +35,7 @@ function Login({}) {
       <label>Username:</label>{" "}
       <input
         type="text"
-        onChange={(event) => { 
+        onChange={(event) => {
           setUsername(event.target.value);
         }}
       />{" "}
@@ -46,7 +46,9 @@ function Login({}) {
           setPassword(event.target.value);
         }}
       />{" "}
-      <button onClick={ login}> Login </button>{" "}
+      <div></div>
+      <br />
+      <button onClick={login}> Login </button>{" "}
     </div>
     </>
   );

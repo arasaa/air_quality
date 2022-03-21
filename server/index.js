@@ -21,7 +21,7 @@ const { errorHandler, notFound } = require("./middlewares/errorMiddleware");
 require("dotenv").config();
 connectDB()
 server.use(express.json())
-const port = process.env.PORT ||5000
+const port = process.env.PORT ||5001
 
 //first API`home APi`
 server.get("/", (req, res) =>{

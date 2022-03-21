@@ -16,7 +16,7 @@ const Update = ({post, setOpenModl, getPosts}) => {
     const updatePost = (e) => {
       e.preventDefault()
       console.log('_________________________________')
-        axios.put(`http://localhost:5000/community/${post._id}`,updateForm)
+        axios.put(`http://localhost:5001/community/${post._id}`,updateForm)
         .then(res =>{
           setOpenModl(false)
           window.location.reload();
