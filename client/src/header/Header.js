@@ -6,7 +6,7 @@ function Header() {
   return (
     <div>
         <nav>
-       <div className="logo1">Logo</div>
+       <div className="logo1">Air Quality</div>
         <input type="checkbox" id="click1" />
         <label htmlFor="click1" className="menu-btn">
           <i className="fas fa-bars"></i>
