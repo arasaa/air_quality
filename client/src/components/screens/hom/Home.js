@@ -8,12 +8,13 @@ function Home() {
 //city is noun and setCity is Metoad ,value for city
   const [city, setCity] = useState("");
   const [status, setStatus] = useState(
-    {temp: '',
+    {temp:'',
       condition: '',
       icon: '',
       is_day:'',
       lat:'',
-      lan:'', airQuality:{} });
+      lan:'',
+      city: '', airQuality:{} });
 
 
 
@@ -31,6 +32,7 @@ function Home() {
           lat: result.location.lat,
           lon: result.location.lon,
           airQuality: result.current.air_quality,
+          city:city
 
         })
         //getAirquality(); dont need this
@@ -60,7 +62,7 @@ function Home() {
        <div className="status">
 
         <ul >
-      <li >{city} (lat:{status.lat}, lon:{status.lon}) </li>
+      <li >{status.city} (lat:{status.lat}, lon:{status.lon}) </li>
           <li>{status.condition} </li>
           <li> {status.temp}</li>
           <li>{status.is_day}deg </li>
@@ -82,7 +84,7 @@ function Home() {
       {status.airQuality["gb-defra-index"]===1?
         <div className="green" ></div>
         :
-        <div className="red"></div>
+        <div className="red" ></div>
       }
       </div> 
     </div>

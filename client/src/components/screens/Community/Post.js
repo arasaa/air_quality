@@ -27,7 +27,7 @@ const Post = ({post,getPosts, setPosts}) => {
   
   return (
     <div id={post._id}>
-      {console.log(post._id)}
+   
  <div className="card1">
    <div className="thumbnail">
       <img

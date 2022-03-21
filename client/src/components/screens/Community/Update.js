@@ -1,5 +1,8 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 
 
 const Update = ({post, setOpenModl, getPosts}) => {
@@ -8,6 +11,7 @@ const Update = ({post, setOpenModl, getPosts}) => {
   const changeHandler = (e) => {
     setUpdateForm({...updateForm, [e.target.name]:e.target.value});
   }
+  const navigate = useNavigate()
 
     const updatePost = (e) => {
       e.preventDefault()
@@ -16,11 +20,14 @@ const Update = ({post, setOpenModl, getPosts}) => {
         .then(res =>{
           setOpenModl(false)
           window.location.reload();
+          navigate("/community");
         })
     
         .catch(err => console.log('error from update',err))
       }
-
+      // useEffect(() => {
+      //   getPosts()
+      // },[])
 
   return (
     <div>

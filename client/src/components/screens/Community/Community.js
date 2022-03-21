@@ -40,6 +40,7 @@ const navigate = useNavigate()
       url: "http://localhost:5000/community",
       method: "POST",
       data: form,
+     
     })
       .then((res) => {
         console.log(res);
@@ -47,6 +48,7 @@ const navigate = useNavigate()
       .catch((err) => {
         console.log(err);
       });
+      
   };
   ///////////////////////////////////////////////////////////////////////
   
