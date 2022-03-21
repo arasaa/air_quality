@@ -17,7 +17,7 @@ const Registration = () => {
 
     //request to backend
     axios({
-      url: "http://localhost:5000/user",
+      url: "http://localhost:5001/user",
       method: "POST",
       data: user,
       
@@ -90,6 +90,8 @@ const Registration = () => {
           <label htmlFor="img">Select image:</label>
           <input type="file" id="img" name="pic" accept="image/*" />
         </div>
+        <div></div>
+        <br />
         <input type="submit" value="Submit" />
       </form>
     </div>

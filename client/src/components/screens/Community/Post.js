@@ -16,7 +16,7 @@ const Post = ({post,getPosts, setPosts}) => {
   const [openShare, setOpenShare] = useState()
   const [openModl, setOpenModl] = useState(false)
   const deletePost = () => {
-    axios.delete(`http://localhost:5000/community/${post._id}`)
+    axios.delete(`http://localhost:5001/community/${post._id}`)
     .then(res => {
       console.log('DELETED', res)
       getPosts()

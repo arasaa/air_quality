@@ -11,7 +11,7 @@ const navigate = useNavigate()
   /////////////////////////////////////////////////////////////////////////
   const getPosts = () =>{
     axios({
-      url: "http://localhost:5000/community",
+      url: "http://localhost:5001/community",
       method: "GET",
     })
       .then((res) => {
@@ -37,7 +37,7 @@ const navigate = useNavigate()
     e.preventDefault();
     //request to backend
     axios({
-      url: "http://localhost:5000/community",
+      url: "http://localhost:5001/community",
       method: "POST",
       data: form,
      
