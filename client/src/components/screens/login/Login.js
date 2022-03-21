@@ -26,6 +26,10 @@ function Login({}) {
       .catch((err) => console.log(err));
   };
   return (
+    <>
+    <div className="shad">
+      <br/>
+    </div>
     <div className="login">
       {" "}
       <label>Username:</label>{" "}
@@ -44,6 +48,7 @@ function Login({}) {
       />{" "}
       <button onClick={ login}> Login </button>{" "}
     </div>
+    </>
   );
 }
 export default Login;

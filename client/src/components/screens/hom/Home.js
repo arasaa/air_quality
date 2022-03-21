@@ -61,14 +61,22 @@ function Home() {
 
        <div className="status">
 
-        <ul >
+        <ul className="UL-home">
       <li >{status.city} (lat:{status.lat}, lon:{status.lon}) </li>
           <li>{status.condition} </li>
           <li> {status.temp}</li>
           <li>{status.is_day}deg </li>
-          <img src={status.icon} alt="icon" />
+          <img src={status.icon} alt="icon" className="IMG-Home"/>
         </ul>
-       
+
+        <div>
+      {status.airQuality["gb-defra-index"]===1?
+        <div className="green" ></div>
+        :
+        <div className="red" ></div>
+      }
+       </div> 
+       <div className="advanced-Data">
          Air Quality:
         <br/>co: {status.airQuality.co}
         <br/>gb-defra-index: {status.airQuality["gb-defra-index"]}
@@ -78,14 +86,11 @@ function Home() {
         <br/>pm2_5:  {status.airQuality.pm2_5}
         <br/>pm10: {status.airQuality.pm10}
         <br/>so2: {status.airQuality.so2}
-        
+        </div>
         
 
-      {status.airQuality["gb-defra-index"]===1?
-        <div className="green" ></div>
-        :
-        <div className="red" ></div>
-      }
+        
+
       </div> 
     </div>
     

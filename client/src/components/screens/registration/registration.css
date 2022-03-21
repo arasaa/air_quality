@@ -8,6 +8,7 @@
 	border: 5px solid #60676e;
     margin: auto;
     min-height: 100vh;
+    box-shadow: 2px 0.1px 15px 7px rgb(15, 211, 218);
 }
 .Register input[type=submit],
 .Register input[type=button],
