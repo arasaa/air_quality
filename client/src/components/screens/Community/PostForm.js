@@ -5,7 +5,7 @@ const postForm = ({getPosts, submitHandler, handleChange, form}) => {
 
     <div style={{marginBottom:"5rem"}}>
        <form className="postForm" onSubmit={submitHandler}>
-        <h1 className="postH1">Share your expires</h1>
+        <h1 className="postH1">Share your experiences</h1>
         <label className="postLabel">Title</label>
         <input
           type="text"
