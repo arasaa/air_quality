@@ -18,27 +18,44 @@ function Home() {
 
 
 
-  function clickButton() {
+  async function clickButton() {
+    //request for air quality data
     const url = `http://api.weatherapi.com/v1/current.json?key=fc1a936d3a8a422b928201633221102&q=${city}&aqi=yes`
-    fetch(url)
-      .then((res) => res.json())
-      .then(result => {
-        console.log(result)
-        setStatus({
-          temp: result.current.temp_c,
-          condition: result.current.condition.text,
-          icon: result.current.condition.icon,
-          is_day:result.current.condition.is_day,
-          lat: result.location.lat,
-          lon: result.location.lon,
-          airQuality: result.current.air_quality,
-          city:city
+    let res = await fetch(url);
+    let result = await res.json();
+    console.log(result)
+    /* await setStatus({
+      temp: result.current.temp_c,
+      condition: result.current.condition.text,
+      icon: result.current.condition.icon,
+      is_day:result.current.condition.is_day,
+      lat: result.location.lat,
+      lon: result.location.lon,
+      airQuality: result.current.air_quality,
+      city:city
 
-        })
-        //getAirquality(); dont need this
-      }
-      )
-      .catch(err => console.log(err))
+    }); */
+
+    
+  //request for unsplash data
+  const us_url = `https://api.unsplash.com/search/photos/?client_id=7N_4Qkb8_eoQjlZzIr_kbIEFlLcTgqd-xhNmTYKJhn0&query=${city}`;
+  let us_res = await fetch(us_url);
+  let jData = await us_res.json();
+  //await setStatus({...status, img: jData.results[0].urls.regular})
+
+  let finalResult = await Promise.all([result, jData, ]);
+  setStatus({
+    temp: finalResult[0].current.temp_c,
+    condition: finalResult[0].current.condition.text,
+    icon: finalResult[0].current.condition.icon,
+    is_day: finalResult[0].current.condition.is_day,
+    lat: finalResult[0].location.lat,
+    lon: finalResult[0].location.lon,
+    airQuality: finalResult[0].current.air_quality,
+    city: city,
+    img: finalResult[1].results[0].urls.regular
+  });
+  console.log(finalResult);
 
   }
 
@@ -72,7 +89,7 @@ function Home() {
       <div className="status">
         {/* whenever an element should be displayed based on a condition use a turnari and in true statement use a pair of parantheses that includes the element/s. In the false statement use a null */}
         {status.temp ? (
-          <>
+          <div class="result-container">
             <ul>
               <li>
                 {status.city} (lat:{status.lat}, lon:{status.lon}){" "}
@@ -82,6 +99,7 @@ function Home() {
               <li>{status.is_day}deg </li>
               <img src={status.icon} alt="icon" />
             </ul>
+            <div>
             Air Quality:
             <br />
             co: {status.airQuality.co}
@@ -99,7 +117,9 @@ function Home() {
             pm10: {status.airQuality.pm10}
             <br />
             so2: {status.airQuality.so2}
-          </>
+            </div>
+            <img src={status.img} alt="city" style={{borderRadius:"5px"}} />
+          </div>
         ) : null}
 
         {status.airQuality["gb-defra-index"] === 1 ? (
