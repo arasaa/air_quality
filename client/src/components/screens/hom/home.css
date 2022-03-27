@@ -73,15 +73,27 @@ align-items: center;
   align-items: center;
 }
 img{
-  width: 10vw;
-  border-radius:50%;
+  width: 17vw;
+  height: 20vw;
+  border-radius:40%;
 }
 
 .green{
   display: flex;
-  align-items: center;
-  justify-content: center;
-   width: 150px;
+ align-self: center;
+ right: 100px;
+ 
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+   
+ }
+ .red{
+  display: flex;
+  align-self: center;
+  right: 100px;
+  
+   width: 200px;
    height: 100px;
    overflow: hidden;
  }
@@ -105,16 +117,6 @@ img{
    }
  }
 
-.red{
- display: flex;
- align-self: center;
- right: 100px;
- /* align-items:center;
- justify-content: center; */
-  width: 200px;
-  height: 100px;
-  overflow: hidden;
-}
 .red::before{
   content: 'dddddddddd';
   color: transparent;

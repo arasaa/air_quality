@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import "./home.css"
 import SearchIcon from '@mui/icons-material/Search';
+import { fontWeight } from '@mui/system';
 
 function Home() {
 
@@ -86,7 +87,7 @@ function Home() {
         </span>
       </div>
 
-      <div className="status">
+      <div className="status" style={{ fontWeight: "bold", color: "black" }}>
         {/* whenever an element should be displayed based on a condition use a turnari and in true statement use a pair of parantheses that includes the element/s. In the false statement use a null */}
         {status.temp ? (
           <div class="result-container">
@@ -100,34 +101,43 @@ function Home() {
               <img src={status.icon} alt="icon" />
             </ul>
             <div>
-            Air Quality:
-            <br />
-            co: {status.airQuality.co}
-            <br />
-            gb-defra-index: {status.airQuality["gb-defra-index"]}
-            <br />
-            no2: {status.airQuality.no2}
-            <br />
-            no2: {status.airQuality.no2}
-            <br />
-            o3: {status.airQuality.o3}
-            <br />
-            pm2_5: {status.airQuality.pm2_5}
-            <br />
-            pm10: {status.airQuality.pm10}
-            <br />
-            so2: {status.airQuality.so2}
+              <span style={{ fontWeight: "bold", color: "black" }}>
+                {" "}
+                Air Quality:
+                <br />
+                co: {status.airQuality.co}
+                <br />
+                gb-defra-index: {status.airQuality["gb-defra-index"]}
+                <br />
+                no2: {status.airQuality.no2}
+                <br />
+                no2: {status.airQuality.no2}
+                <br />
+                o3: {status.airQuality.o3}
+                <br />
+                pm2_5: {status.airQuality.pm2_5}
+                <br />
+                pm10: {status.airQuality.pm10}
+                <br />
+                so2: {status.airQuality.so2}
+                {status.airQuality["gb-defra-index"] === 1 ? (
+                  <div className="green"></div>
+                ) : (
+                  <div className="red"></div>
+                )}
+              </span>
             </div>
-            <img src={status.img} alt="city" style={{borderRadius:"5px"}} />
+
+            <img src={status.img} alt="city" style={{ borderRadius: "5px" }} />
           </div>
         ) : null}
 
-        {status.airQuality["gb-defra-index"] === 1 ? (
-          <div className="green"></div>
+        {/*  {status.airQuality["gb-defra-index"] === 1 ? (
+          <div className="yello"></div>
         ) : (
-          <div className="red"></div>
-        )}
-{/*        
+          <div className="yello"></div>
+        )} */}
+        {/*        
 
 if zou want to add more colors use following approach
 
