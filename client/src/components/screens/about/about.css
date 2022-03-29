@@ -2,7 +2,7 @@
 .shadow-about{
     box-shadow: 2px 0.1px 15px 7px rgb(15, 211, 218);
 }
-h2{
+aboutH2{
     color: #000;
     text-align: center;
     padding:5%;

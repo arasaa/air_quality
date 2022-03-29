@@ -6,13 +6,8 @@ import "./post.css";
 import axios from 'axios';
 import Update from './Update';
 import Share from './Share';
-import RenderModal from './modal/RenderModal';
-import Modal from './modal/Modal';
-//import closeIcon from "../../../assets/close.png";
-//import closeIcon from '../../assets/close.png'
 
 const Post = ({post,getPosts, setPosts}) => {
-  //const location = useLocation()
   const [openShare, setOpenShare] = useState()
   const [openModl, setOpenModl] = useState(false)
   const deletePost = () => {

@@ -4,7 +4,7 @@ import './about.css'
 function About() {
   return (
     <div className="shadow-about">
-      <h2 > Clean air is vital for your city's health and prosperity!</h2>
+      <h2 className="aboutH2"> Clean air is vital for your city's health and prosperity!</h2>
      <p className="aboutP">Long-term exposure from living in polluted cities increases the chance of premature death and cancer, and lung and heart conditions.The people most at risk are young children, the elderly and people with pre-existing health conditions. Children – whose lungs and immune systems are still developing – born and raised in areas of high air pollution are likely to develop asthma, have several years taken off their life expectancy and are up to four times more likely to have significantly reduced lung function in adulthood. 
      Pollution causes:Indoor and outdoor air pollution kills around 7 million people each year. And many more suffer from related conditions such premature birth, low birth weight and asthma.4
 
