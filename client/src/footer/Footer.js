@@ -7,11 +7,19 @@ import './footer.css'
 function Footer() {
   return (
     <section className="footer">
-        <div className="social">
-            <a href="#"> <FacebookOutlinedIcon></FacebookOutlinedIcon></a>
-            <a href="#"> <TwitterIcon></TwitterIcon></a>
-            <a href="#"> <InstagramIcon></InstagramIcon></a>
-        
+      <div className="social">
+        <a href="https://de-de.facebook.com/">
+          {" "}
+          <FacebookOutlinedIcon></FacebookOutlinedIcon>
+        </a>
+        <a href="https://twitter.com/?lang=de">
+          {" "}
+          <TwitterIcon></TwitterIcon>
+        </a>
+        <a href="#">
+          {" "}
+          <InstagramIcon></InstagramIcon>
+        </a>
 
         {/* <ul className="list">
           <li><Link to="/">Home</Link></li>
@@ -21,7 +29,7 @@ function Footer() {
           <li><Link to="/login">Login</Link></li>
         </ul> */}
         <p className="Copyright">Copyright &copy;2022</p>
-        </div>
+      </div>
     </section>
   );
    

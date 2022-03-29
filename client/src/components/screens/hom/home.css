@@ -1,20 +1,21 @@
 
 .api{
-  display: flex; 
-  /* justify-content: center;
-  align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  font-size: large;
 
-} 
+}
  .search-boxx{
   position: absolute;
-   top: 18%;
+   top: 15%;
   left:50%;  
   transform: translate(-50%, -50%);
   background:#2f3640;
   height: 40px;
   border-radius: 50%;
-  padding: 5px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +46,7 @@
   color: #18dae8;
   float: right;
   width:30px;
-  height: 25px;
+  height: 30px;
   border-radius: 50%;
   background: #2f3640;
   display: flex;
@@ -62,36 +63,37 @@ align-items: center;
 }
 
 .status{
-  border-top: 0.1px solid rgb(173, 237, 248);
+  border: 0.1px solid rgb(173, 237, 248);
   box-shadow: 2px 0.1px 15px 7px rgb(15, 211, 218);
   width: 100%;
-  height: 95vh;
+  height: 60vh;
   display: flex;
-  justify-content: space-around;
-  /* justify-content: center;*/
-  align-items: center; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.UL-home{
-  
-  border: 1px solid red;
-  margin-right: 8em;
-  margin-left: 4em;
-}
-.advanced-Data{
-  display: flex;
-  margin-left: auto;
-  width: 20em;
-  border: 1px solid red;
-}
-.IMG-Home{
-  width: 10vw;
-  border-radius:50%;
+img{
+  width: 17vw;
+  height: 20vw;
+  border-radius:40%;
 }
 
 .green{
   display: flex;
- flex: 2 3 0;
-   width: 150px;
+ align-self: center;
+ right: 100px;
+ 
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+   
+ }
+ .red{
+  display: flex;
+  align-self: center;
+  right: 100px;
+  
+   width: 200px;
    height: 100px;
    overflow: hidden;
  }
@@ -115,15 +117,6 @@ align-items: center;
    }
  }
 
-.red{
- display: flex;
- flex: 2 3 0;
- right: 100px;
-  width: 200px;
-  height: 100px;
-  overflow: hidden;
-  border: 1px solid red;
-}
 .red::before{
   content: 'dddddddddd';
   color: transparent;
@@ -141,4 +134,18 @@ align-items: center;
   100%{
     transform: translateX(-90px)
   }
+}
+
+.result-container{
+  display: flex;
+  justify-content: space-evenly;
+  width: 70vw;
+  margin:auto;
+}
+
+@media screen and (max-width: 480px) {
+  div{
+    background-color: rgb(151, 209, 151);
+  }
+ 
 }

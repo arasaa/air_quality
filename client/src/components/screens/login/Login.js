@@ -27,29 +27,32 @@ function Login({}) {
   };
   return (
     <>
-    <div className="shad">
-      <br/>
-    </div>
-    <div className="login">
-      {" "}
-      <label>Username:</label>{" "}
-      <input
-        type="text"
-        onChange={(event) => {
-          setUsername(event.target.value);
-        }}
-      />{" "}
-      <label>Password:</label>{" "}
-      <input
-        type="password"
-        onChange={(event) => {
-          setPassword(event.target.value);
-        }}
-      />{" "}
-      <div></div>
-      <br />
-      <button onClick={login}> Login </button>{" "}
-    </div>
+      <div className="shad">
+        <br />
+      </div>
+      <div className="login">
+        {" "}
+        <label>Username:</label> <div></div>
+        <br />
+        <input
+          type="text"
+          onChange={(event) => {
+            setUsername(event.target.value);
+          }}
+        />{" "}
+        
+        <label>Password:</label> <div></div>
+        <br />
+        <input
+          type="password"
+          onChange={(event) => {
+            setPassword(event.target.value);
+          }}
+        />{" "}
+        <div></div>
+        <br />
+        <button onClick={login}> Login </button>{" "}
+      </div>
     </>
   );
 }
