@@ -2,10 +2,11 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Modal from './modal/Modal'
 
 
 
-const Update = ({post, setOpenModl, getPosts}) => {
+const Update = ({post, setOpenModl, getPosts,openModl}) => {
 
   const [updateForm, setUpdateForm] = useState({title: post.title, content: post.content})
   const changeHandler = (e) => {
@@ -30,9 +31,11 @@ const Update = ({post, setOpenModl, getPosts}) => {
       // },[])
 
   return (
+    <>
+    <Modal isOpen={openModl} close={() => setOpenModl(false)}>
     <div>
        <form className="postForm" >
-        <h1 className="postH1">Share your expires</h1>
+        <h1 className="postH1">Edit post</h1>
         <label className="postLabel">Title</label>
         <input
           type="text"
@@ -59,6 +62,9 @@ const Update = ({post, setOpenModl, getPosts}) => {
       </form>
 
     </div>
+    </Modal>
+
+    </>
   )
 }
 

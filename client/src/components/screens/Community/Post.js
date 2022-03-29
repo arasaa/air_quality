@@ -26,7 +26,7 @@ const Post = ({post,getPosts, setPosts}) => {
   }
   
   return (
-    <div id={post._id}>
+    <div id={post._id} className="all_">
    
  <div className="card1">
    <div className="thumbnail">
@@ -38,20 +38,18 @@ const Post = ({post,getPosts, setPosts}) => {
    </div>
 
    <div className="right">
-     <h1 className="title">{post.title}</h1>
      <div className="author">
         <img
          src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
          alt=""
        /> 
        <h2 className="conH2">{post.user.firstname}</h2>
+     <h1 className="title">{post.title}</h1>
      </div>
      <div className="seperator">
        <p className="postP">
        {post.content} </p>
      </div>
-   </div>
-
    <div className="sit0">
      <ul className="sit">
        <li className="conLi">
@@ -65,18 +63,17 @@ const Post = ({post,getPosts, setPosts}) => {
          <ShareIcon onClick={()=>setOpenShare(!openShare)} className="shareIcon"></ShareIcon>
        </li>
      </ul>
-     <div className="dateSpan">
-     <span className="date"> created at </span>
-     <span> { ` ${post.createdAt}`}</span>
-     </div>
    </div>
+     <div className="dateSpan"> {`created at: ${post.createdAt}`}  </div>
    <div>
-      {openModl && <Update post={post} setOpenModl={setOpenModl} setPosts={setPosts}/>} 
+      {openModl && <Update post={post} setOpenModl={setOpenModl} setPosts={setPosts} openModl={openModl}/>} 
    </div>
    <div>
    {/* {openShare && <Share setOpenShare={setOpenShare} />} */}
    {openShare && <Share openShare={openShare} setOpenShare={setOpenShare}/>}
    </div>
+   </div>
+
 
  </div>
  
