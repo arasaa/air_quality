@@ -142,3 +142,10 @@ img{
   width: 70vw;
   margin:auto;
 }
+
+@media screen and (max-width: 480px) {
+  div{
+    background-color: rgb(151, 209, 151);
+  }
+ 
+}
