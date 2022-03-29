@@ -1,17 +1,13 @@
 
+.shadow-about{
+    box-shadow: 2px 0.1px 15px 7px rgb(15, 211, 218);
+}
 h2{
     color: #000;
     text-align: center;
-    padding:5px;
-    
+    padding:5%;
 }
 aboutP{
     color: #000;
     margin: 6%;
-    padding: auto;
-    font-size: large;
-    
-}
-.footer{
-padding: 100px;
 }

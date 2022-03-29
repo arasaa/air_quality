@@ -128,7 +128,7 @@ function Home() {
               </span>
             </div>
 
-            <img src={status.img} alt="city" style={{ borderRadius: "5px" }} />
+            <img src={status.img} alt="city" style={{ borderRadius: "5px" }} class="homeIMG"/>
           </div>
         ) : null}
 
