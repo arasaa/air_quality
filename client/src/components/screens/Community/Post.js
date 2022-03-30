@@ -41,8 +41,8 @@ const Post = ({post,getPosts, setPosts}) => {
        <h2 className="conH2">{post.user.firstname}</h2>
      </div>
      <div className="seperator">
-       <p className="postP">
      <h1 className="title">{post.title}</h1>
+       <p className="postP">
        {post.content} </p>
      </div>
    <div className="sit0">

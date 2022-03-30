@@ -111,19 +111,20 @@
     background: #fff;
     box-shadow: 7px 7px 50px 0px rgba(0, 0, 0, .7);
     padding: 1rem;
+    width: 100%;
 }
 .thumbnail{
-    /* display: flex; */
+    display: flex;
     /* left: 30px; */
     /* top: 30px; */
     /* height: 320px; */
-    /* width: 40%; */
+    width: 60%;
     box-shadow: 7px 7px 50px 0px rgba(0, 0, 0, .7);
     overflow: hidden;
 
 }
 .IMG-posts{
-    /* width: 100%; */
+    width: 100%;
 }
 .right{
    display: flex;
@@ -141,8 +142,9 @@
 .author{
     background: #9ecaff;
     /* height: 30px; */
-    /* width: 110px; */
+    width: 110px;
     border-radius: 20px;
+    /* width: 20%;  */
 }
 .author> img{
     float: left;
@@ -157,19 +159,23 @@ h2.conH2{
     font-size: .8rem;
     color: rgb(0, 66, 87);
 }
+.seperator{
+    /* width: 100%;  */
+    /* height: 50%; */
+}
 .postP{
-    word-wrap: break-word;
-    /* width: 20em; */
-    /* padding: 6em; */
     color: #444242;
+    word-wrap: break-word;
+    width: 400px;
 }
 .sit0{
-   
+    display: flex;
 }
-ul.sit{
+.sit{
    display: flex;
    justify-content: flex-end;
    margin-top: 90px;
+   height: 100%;
 }
 li.conLi{
     display: inline;
@@ -200,8 +206,8 @@ li.conLi{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.4;
-    /* width: 20rem; */
-    /* height: 100px; */
+    width: 20rem;
+    height: 100px;
     transition: all 0.2s;
 
 }
@@ -228,6 +234,7 @@ li.conLi{
 /* __________MOBILE_PHONE___________ */
 @media (min-width: 220px) and (max-width: 600px) {
 
+
             .card1 {
                 display: flex;
                 flex-direction: column;
@@ -243,7 +250,7 @@ li.conLi{
             height: 22em;
             box-shadow: 7px 7px 50px 0px rgba(1, 68, 40, 0.7);
             overflow: hidden;
-            
+            width: 100%;
         
         }
         .IMG-posts{
@@ -307,6 +314,7 @@ li.conLi{
             width: 100%;
         }
         .postP{
+            width: 100%;
             font-size: .65rem;
             word-wrap: break-word;   
         }
@@ -315,7 +323,7 @@ li.conLi{
             
         }
         ul.sit{
-            display: flex;
+            /* display: flex; */
             justify-content: flex-end;
          }
         li.conLi{

@@ -37,7 +37,7 @@ const Registration = () => {
         <div className="container" />
         <center>
           {" "}
-          <h1>Customer Registration Form</h1>{" "}
+          <h1>Sign Up</h1>{" "}
         </center>
         <hr />
         <label htmlFor="psw">
