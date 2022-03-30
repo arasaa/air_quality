@@ -13,7 +13,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 } */
-
+/* body{
+  font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+  color: #57ac63;
+  background: #70f3ff ;
+} */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

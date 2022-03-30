@@ -91,17 +91,17 @@ function Home() {
         {/* whenever an element should be displayed based on a condition use a turnari and in true statement use a pair of parantheses that includes the element/s. In the false statement use a null */}
         {status.temp ? (
           <div class="result-container">
-            <ul>
-              <li>
+            <ul className="home-UL">
+              <li className="home-LI">
                 {status.city} (lat:{status.lat}, lon:{status.lon}){" "}
               </li>
               <li>{status.condition} </li>
-              <li> {status.temp}</li>
-              <li>{status.is_day}deg </li>
-              <img src={status.icon} alt="icon" />
+              <li> {status.temp}{status.is_day} deg </li>
+              <img src={status.icon} alt="icon" className="home-ICON" />
             </ul>
-            <div>
-              <span style={{ fontWeight: "bold", color: "black" }}>
+                <img src={status.img} alt="city" style={{ borderRadius: "5px" }} className="home-IMG"/>
+              <div>
+              <span style={{ fontWeight: "bold", color: "black" }} className="advanc-data">
                 {" "}
                 Air Quality:
                 <br />
@@ -127,9 +127,8 @@ function Home() {
                 )}
               </span>
             </div>
-
-            <img src={status.img} alt="city" style={{ borderRadius: "5px" }} class="homeIMG"/>
-          </div>
+            </div>
+         
         ) : null}
 
         {/*  {status.airQuality["gb-defra-index"] === 1 ? (
