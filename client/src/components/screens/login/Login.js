@@ -27,6 +27,7 @@ function Login({}) {
   };
   return (
     <>
+    <div className='loginContainer'>
       <div className="shad">
         <br />
       </div>
@@ -35,6 +36,7 @@ function Login({}) {
         <label>Username:</label> <div></div>
         <br />
         <input
+        className="loginInput"
           type="text"
           onChange={(event) => {
             setUsername(event.target.value);
@@ -44,6 +46,7 @@ function Login({}) {
         <label>Password:</label> <div></div>
         <br />
         <input
+        className="loginInput"
           type="password"
           onChange={(event) => {
             setPassword(event.target.value);
@@ -52,6 +55,7 @@ function Login({}) {
         <div></div>
         <br />
         <button onClick={login}> Login </button>{" "}
+      </div>
       </div>
     </>
   );

@@ -26,9 +26,6 @@ const Update = ({post, setOpenModl, getPosts,openModl}) => {
     
         .catch(err => console.log('error from update',err))
       }
-      // useEffect(() => {
-      //   getPosts()
-      // },[])
 
   return (
     <>

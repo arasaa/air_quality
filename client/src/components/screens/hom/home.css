@@ -73,27 +73,15 @@ align-items: center;
   align-items: center;
 }
 .homeIMG{
-  width: 17vw;
-  height: 20vw;
-  border-radius:40%;
+  width: 10vw;
+  border-radius:50%;
 }
 
 .green{
   display: flex;
- align-self: center;
- right: 100px;
- 
-  width: 200px;
-  height: 100px;
-  overflow: hidden;
-   
- }
- .red{
-  display: flex;
-  align-self: center;
-  right: 100px;
-  
-   width: 200px;
+  align-items: center;
+  justify-content: center;
+   width: 150px;
    height: 100px;
    overflow: hidden;
  }
@@ -117,6 +105,16 @@ align-items: center;
    }
  }
 
+.red{
+ display: flex;
+ align-self: center;
+ right: 100px;
+ /* align-items:center;
+ justify-content: center; */
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
 .red::before{
   content: 'dddddddddd';
   color: transparent;
@@ -142,10 +140,3 @@ align-items: center;
   width: 70vw;
   margin:auto;
 }
-
-/* @media screen and (max-width: 480px) {
-  div{
-    background-color: rgb(151, 209, 151);
-  }
- 
-} */

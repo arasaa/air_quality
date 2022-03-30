@@ -39,10 +39,10 @@ const Post = ({post,getPosts, setPosts}) => {
          alt=""
        /> 
        <h2 className="conH2">{post.user.firstname}</h2>
-     <h1 className="title">{post.title}</h1>
      </div>
      <div className="seperator">
        <p className="postP">
+     <h1 className="title">{post.title}</h1>
        {post.content} </p>
      </div>
    <div className="sit0">

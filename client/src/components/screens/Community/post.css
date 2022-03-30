@@ -108,32 +108,27 @@
 .card1 {
     display: flex;
     flex-direction: row;
-    /* min-height: 450px; */
-    /* min-width: 900px; */
-    /* margin: 20px 0px; */
     background: #fff;
     box-shadow: 7px 7px 50px 0px rgba(0, 0, 0, .7);
     padding: 1rem;
 }
 .thumbnail{
-    display: flex;
-    /* float: left; */
-    left: 30px;
-    top: 30px;
-    height: 320px;
-    width: 40%;
+    /* display: flex; */
+    /* left: 30px; */
+    /* top: 30px; */
+    /* height: 320px; */
+    /* width: 40%; */
     box-shadow: 7px 7px 50px 0px rgba(0, 0, 0, .7);
     overflow: hidden;
 
 }
 .IMG-posts{
-    /* width: 530px; */
-    width: 100%;
+    /* width: 100%; */
 }
 .right{
    display: flex;
    flex-direction: column;
-   padding: 1em;
+   /* padding: 1em; */
    margin-bottom: 1.5em;
 }
 .title{
@@ -141,12 +136,12 @@
     font-size: 2rem;
     color: #000000;
     align-self: center;
-    width: 10em;
+    /* width: 10em; */
 }
 .author{
     background: #9ecaff;
-    height: 30px;
-    width: 110px;
+    /* height: 30px; */
+    /* width: 110px; */
     border-radius: 20px;
 }
 .author> img{
@@ -164,8 +159,8 @@ h2.conH2{
 }
 .postP{
     word-wrap: break-word;
-    width: 30em;
-    padding: 6em;
+    /* width: 20em; */
+    /* padding: 6em; */
     color: #444242;
 }
 .sit0{
@@ -205,8 +200,8 @@ li.conLi{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.4;
-    width: 20rem;
-    height: 100px;
+    /* width: 20rem; */
+    /* height: 100px; */
     transition: all 0.2s;
 
 }
@@ -226,52 +221,45 @@ li.conLi{
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    margin-top:5rem;
+    /* margin-top:5rem; */
     color: #065f6b;
 }
 /* _________________________________ */
 /* __________MOBILE_PHONE___________ */
-@media (min-width: 320px) and (max-width: 600px) {
-  
-        .all_{   
-            display: flex;
-        }
+@media (min-width: 220px) and (max-width: 600px) {
 
             .card1 {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
-                /* min-width: 368px; */
-                width: 100%;
                 background: #060c21;
                 box-shadow: 7px 7px 50px 0px rgba(0, 0, 0, .7);
-                /* padding: 1rem; */
+                width: 100%;
+                padding: 2rem;
           
         }
         .thumbnail{
             order: 2;
-            /* bottom: 5em;  */
-            height: 30em;
-            width: 27em;
+            height: 22em;
             box-shadow: 7px 7px 50px 0px rgba(1, 68, 40, 0.7);
             overflow: hidden;
             
         
         }
         .IMG-posts{
-            width: em;
+            height: 22em;
+            width: 100%;
             border: 5px solid #70f3ff;
-            border-radius: 60px;
+            border-radius: 30px;
             box-shadow:  -4px 10px 25px  #70f3ff;
         } 
         .right{
           order: 1;
-            /* width: 29em; */
+            width: 100%;
             border: 5px solid #70f3ff;
             border-radius: 60px;
             box-shadow:  -4px 10px 25px  #70f3ff;
             border-radius: 10px;
-            /* min-height: 32em; */
         }
         
         .postForm::before{
@@ -304,36 +292,35 @@ li.conLi{
         .author{
         
             margin-top:1em;
-            margin-left: 9em;
+            width: 8em;
+            height: 2em;
             
         }
         .title{
             padding-top: 1em;
             font-weight: 800;
             font-size: 1.5em;
-            margin-left: -1em;
             color:rgb(12, 172, 151);
-            width: 13em;
+            word-wrap: break-word;  
         }
         .seperator{
+            width: 100%;
         }
         .postP{
-            min-height: 20em;
             font-size: .65rem;
             word-wrap: break-word;   
         }
         .sit0{
             display: flex;
-            margin-top:-10em;
             
         }
         ul.sit{
             display: flex;
             justify-content: flex-end;
-            /* margin-top: 90px; */
          }
         li.conLi{
             color: #00bcd4;
+         
         }
         .dateSpan{
             font-size: 1em;
@@ -341,3 +328,361 @@ li.conLi{
         }
     
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .postForm{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    box-shadow: 2px 0.1px 15px 7px rgb(15, 211, 218);
+}
+.postForm::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+
+}
+.postForm::before, .postForm::after{
+    background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4)
+
+}
+.postForm::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+.postH1{
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.postLabel{
+    text-align: left;
+    display: block;
+}
+
+.postImg{
+    width: 20rem;
+    padding: 6px 10px;
+    margin: 10px 0px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.postInput{
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: 'heebo', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    width: 20rem;
+    transition: all 0.2s;
+}
+.postInput:hover{
+    cursor: pointer;
+    background-color: #eeeeee;
+
+}
+.postInput:focus{
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #3b8a86;
+    
+}
+.postBtn {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgb(32, 104, 4);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+    width: 200px;
+}
+
+.postBtn:hover {
+    background-color: rgb(46, 151, 95);
+}
+
+.postBtn:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+} */
+
+
+/****/
+
+/* .card1 {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    box-shadow: 7px 7px 50px 0px rgba(0, 0, 0, .7);
+    padding: 1rem;
+}
+.thumbnail{
+    display: flex;
+  
+    top: 30px;
+  
+    box-shadow: 7px 7px 50px 0px rgba(0, 0, 0, .7);
+    overflow: hidden;
+
+}
+.IMG-posts{
+   
+}
+.right{
+   display: flex;
+   flex-direction: column;
+
+   margin-bottom: 1.5em;
+}
+.title{
+    padding-top: 15px;
+    font-size: 2rem;
+    color: #000000;
+    align-self: center;
+
+}
+.author{
+    background: #9ecaff;
+ 
+    border-radius: 20px;
+}
+.author> img{
+    float: left;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+h2.conH2{
+    padding-top: 8px;
+    margin-right: 6px;
+    text-align: right;
+    font-size: .8rem;
+    color: rgb(0, 66, 87);
+}
+.postP{
+    word-wrap: break-word;
+ 
+    color: #444242;
+}
+.sit0{
+   
+}
+ul.sit{
+   display: flex;
+   justify-content: flex-end;
+   margin-top: 90px;
+}
+li.conLi{
+    display: inline;
+    list-style: none;
+    padding-right: 40px;
+    color: #7b7b7b;
+}
+.deleteIcon{
+    cursor: pointer;
+}
+.editIcon{
+    cursor: pointer;
+}
+.shareIcon{
+    cursor: pointer;
+}
+
+
+
+.textArea{
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: 'heebo', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+  
+    transition: all 0.2s;
+
+}
+.textArea:hover{
+    cursor: pointer;
+    background-color: #eeeeee;
+
+}
+.textArea:focus{
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #3b8a86;
+    
+}
+.dateSpan{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  
+    color: #065f6b;
+} */
+/* _________________________________ */
+/* __________MOBILE_PHONE___________ */
+/* @media (min-width: 220px) and (max-width: 600px) {
+        .all_{   
+            display: flex;
+        }
+
+            .card1 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                background: #060c21;
+                box-shadow: 7px 7px 50px 0px rgba(0, 0, 0, .7);
+              
+          
+        }
+        .thumbnail{
+            order: 2;
+            bottom: 5em; 
+           
+            box-shadow: 7px 7px 50px 0px rgba(1, 68, 40, 0.7);
+            overflow: hidden;
+            
+        
+        }
+        .IMG-posts{
+          
+            border: 5px solid #70f3ff;
+            border-radius: 60px;
+            box-shadow:  -4px 10px 25px  #70f3ff;
+        } 
+        .right{
+          order: 1;
+          
+            border: 5px solid #70f3ff;
+            border-radius: 60px;
+            box-shadow:  -4px 10px 25px  #70f3ff;
+            border-radius: 10px;
+           
+        }
+        
+        .postForm::before{
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: #fff;
+            z-index: -1;
+    
+        }
+        .postForm::before, .postForm::after{
+            background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4)
+    
+        }
+        .postForm::after{
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: #fff;
+            z-index: -2;
+            filter: blur(40px);
+        }
+            
+        .author{
+        
+      
+            
+        }
+        .title{
+            padding-top: 1em;
+            font-weight: 800;
+            font-size: 1.5em;
+       
+            color:rgb(12, 172, 151);
+          
+        }
+        .seperator{
+        }
+        .postP{
+          
+            font-size: .65rem;
+            word-wrap: break-word;   
+        }
+        .sit0{
+            display: flex;
+       
+            
+        }
+        ul.sit{
+            display: flex;
+            justify-content: flex-end;
+           
+         }
+        li.conLi{
+            color: #00bcd4;
+         
+        }
+        .dateSpan{
+            font-size: 1em;
+            color: #039cb1;
+        }
+    
+  } */
