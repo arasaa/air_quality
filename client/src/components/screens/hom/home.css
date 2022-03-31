@@ -144,8 +144,6 @@ align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 20px;
-  /* height: 80%; */
-  /* margin:auto; */
 }
 .home-IMG{
   order: 1;
@@ -168,4 +166,49 @@ align-items: center;
 }
 .home-ICON{
   width: 100%;
+}
+
+/* _________________________________ */
+/* __________MOBILE_PHONE___________ */
+@media (min-width: 220px) and (max-width: 600px) {
+  .status{
+    border: 0.1px solid rgb(173, 237, 248);
+    box-shadow: 2px 0.1px 15px 7px rgb(15, 211, 218);
+    /* width: 100vh; */
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+  padding-left: 4em;
+  margin-top: 7em;
+  }
+  .result-container{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;  
+    height: 200px;   
+  }
+  .home-IMG{
+    order: 1;
+    width: 90%;
+    height: 100%;
+    margin-left:1px
+  }
+  .home-UL{
+      list-style-type: none;
+      align-self: center;
+  }
+  .home-ICON{
+     
+  }
+  .advanc-data{
+      display: flex;
+      width: 90%;
+      flex-direction: column;
+  }
+  .green{
+     
+  }
+  .red{
+       
+  }
 }

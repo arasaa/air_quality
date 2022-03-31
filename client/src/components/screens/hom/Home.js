@@ -100,7 +100,7 @@ function Home() {
               <img src={status.icon} alt="icon" className="home-ICON" />
             </ul>
                 <img src={status.img} alt="city" style={{ borderRadius: "5px" }} className="home-IMG"/>
-              <div>
+              <div className="status-data">
               <span style={{ fontWeight: "bold", color: "black" }} className="advanc-data">
                 {" "}
                 Air Quality:
