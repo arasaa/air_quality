@@ -1,5 +1,5 @@
 import React from 'react'
-import {FacebookShareButton, WhatsappShareButton, TwitterShareButton, TelegramShareButton} from "react-share";
+import {FacebookShareButton, TwitterShareButton, TelegramShareButton} from "react-share";
 import {FacebookIcon, TelegramIcon, TwitterIcon, WhatsappIcon,} from "react-share"
 import Modal from './modal/Modal'
 import GlobalStyles from "./modal/GlobalStyles";

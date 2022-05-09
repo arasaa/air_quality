@@ -7,17 +7,11 @@ const asyncHandler = require('express-async-handler')
 const getPost = asyncHandler(async(req, res) => {
     //mongoDB query
     //find all posts that belong to that particular user
-<<<<<<< HEAD
-    //{user: req.user._id}
-    const post = await Post.find()
-    .populate('user', "-password")
-=======
     //const post = await Post.find({user: req.user._id})
     const post = await Post.find().populate(
       "user",
       "-password"
     );
->>>>>>> 59881534de01c5cd2ccdb8b4a02b33ea59dfda31
     res.json(post)
 
 
